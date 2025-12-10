@@ -12,6 +12,6 @@ export default withNextra({
     images: {
         unoptimized: true,
     },
-    basePath: '',
+    basePath: '/dm-docs',
     trailingSlash: true,
 })
