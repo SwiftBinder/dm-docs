@@ -1,0 +1,420 @@
+# Search & Filtering
+
+Complete guide to finding documents quickly — using search, filters, and the command palette.
+
+---
+
+## Overview
+
+Document Manager provides multiple ways to find what you're looking for:
+
+| Method | Best For |
+|--------|----------|
+| **Command Palette** | Quick navigation anywhere |
+| **Search Bar** | Text-based document search |
+| **Filters** | Narrowing by status, project, tags |
+| **Tags Page** | Finding by category |
+| **Quick Access** | Recent and starred items |
+
+---
+
+## Command Palette
+
+The fastest way to find anything in Document Manager.
+
+### Opening the Command Palette
+
+Press `Ctrl+K` (Windows/Linux) or `Cmd+K` (Mac)
+
+{/* SCREENSHOT: command-palette.png
+     Capture the command palette showing:
+     - Search input at top
+     - Recent items or suggestions
+     - Clean, focused interface
+     - Keyboard shortcut hint
+*/}
+
+### What You Can Do
+
+| Type This | To Do This |
+|-----------|------------|
+| Document name | Jump to that document |
+| Project name | Navigate to project |
+| "Documents" | Go to Documents page |
+| "Settings" | Open Settings |
+| Action keywords | Perform actions |
+
+### Command Palette Tips
+
+- Start typing immediately — no need to click
+- Press **Enter** to select first result
+- Use **arrow keys** to navigate results
+- Press **Esc** to close
+
+---
+
+## Document Search
+
+### Using the Search Bar
+
+On the Documents page:
+
+1. Click in the search box (or it may be focused)
+2. Type your search terms
+3. Results filter in real-time
+
+{/* SCREENSHOT: documents-search-bar.png
+     Capture the Documents page showing:
+     - Search bar with text entered
+     - Results being filtered
+     - Clear/reset option
+*/}
+
+### What Gets Searched
+
+- Document **name**
+- Document **description**
+- (Content search may be available — check with admin)
+
+### Search Tips
+
+| Tip | Example |
+|-----|---------|
+| Use key words | "sales report" |
+| Partial matches | "contract" finds "contracts" |
+| Multiple terms | "Q4 marketing" |
+
+---
+
+## Filters
+
+### Available Filters
+
+On the Documents page, you can filter by:
+
+{/* SCREENSHOT: filter-dropdowns.png
+     Capture the filter area showing:
+     - Status dropdown
+     - Project dropdown
+     - Any other filter options
+*/}
+
+| Filter | Options |
+|--------|---------|
+| **Status** | Draft, Published, Archived, All |
+| **Project** | Your projects list |
+| **Tags** | Available tags (if filter exists) |
+
+### Using Status Filter
+
+1. Click the Status dropdown
+2. Select a status
+3. Only matching documents appear
+
+| Status | Shows |
+|--------|-------|
+| All | Everything |
+| Draft | Work in progress |
+| Published | Finalized documents |
+| Archived | Inactive documents |
+
+### Using Project Filter
+
+1. Click the Project dropdown
+2. Select a project
+3. Only that project's documents appear
+
+### Combining Filters
+
+Filters work together:
+
+```
+Status: Published
+Project: Marketing
+Search: "report"
+
+= Published reports in the Marketing project
+```
+
+### Clearing Filters
+
+- Click **Clear** or **Reset**
+- Or select "All" for each filter
+- Search bar: click X or delete text
+
+---
+
+## Pagination
+
+### How Pagination Works
+
+When you have many documents:
+- Results are split into pages
+- Default: 20 documents per page
+- Navigate with page controls
+
+{/* SCREENSHOT: pagination-controls.png
+     Capture the pagination area showing:
+     - Page numbers
+     - Previous/Next buttons
+     - Total count if shown
+*/}
+
+### Pagination Controls
+
+| Control | Action |
+|---------|--------|
+| **Previous** | Go back one page |
+| **Next** | Go forward one page |
+| **Page numbers** | Jump to specific page |
+| **First/Last** | Jump to beginning/end |
+
+---
+
+## Quick Access
+
+The sidebar provides instant access to common document groups.
+
+{/* SCREENSHOT: quick-access-sidebar.png
+     Capture the Quick Access section showing:
+     - Starred
+     - Recent
+     - My Drafts
+     - Shared with Me
+*/}
+
+### Starred
+
+Documents you've marked as favorites for quick access.
+
+**To star a document:**
+1. Open the document
+2. Click the star icon
+3. Document appears in Starred
+
+### Recent
+
+Your most recently accessed documents.
+
+- Automatically populated
+- Shows last 5-10 documents
+- Updates as you work
+
+### My Drafts
+
+Documents you created that are still in Draft status.
+
+- Helps track your work in progress
+- Quick access to incomplete work
+
+### Shared with Me
+
+Documents shared specifically with you (if feature is enabled).
+
+---
+
+## Tags for Discovery
+
+### Using Tags Page
+
+1. Click **Tags** in sidebar
+2. See all available tags
+3. Click a tag to filter documents
+
+{/* SCREENSHOT: tags-for-search.png
+     Capture the Tags page showing:
+     - Tags as clickable items
+     - Document counts
+     - Search within tags
+*/}
+
+### Tag-Based Search Strategy
+
+When you know the category but not the name:
+
+1. Go to Tags
+2. Find relevant tag (e.g., "contract")
+3. Click to see all matching documents
+4. Use additional filters to narrow down
+
+---
+
+## View Modes
+
+### Table vs Grid View
+
+Switch between views using the toggle icons:
+
+| View | Best For |
+|------|----------|
+| **Table** | Scanning many documents, seeing details |
+| **Grid** | Visual browsing, fewer documents |
+
+{/* SCREENSHOT: view-mode-comparison.png
+     Capture both views or the toggle showing:
+     - Table view icon
+     - Grid view icon
+     - Current selection
+*/}
+
+Your view preference is saved automatically.
+
+---
+
+## Sorting
+
+### Sort Options
+
+Documents can be sorted by:
+
+| Sort By | Description |
+|---------|-------------|
+| **Modified Date** | Most recently updated first |
+| **Created Date** | Newest documents first |
+| **Name** | Alphabetical order |
+| **Status** | Grouped by status |
+
+### Changing Sort Order
+
+Click column headers in table view, or use sort dropdown if available.
+
+---
+
+## Search Strategies
+
+### Finding a Known Document
+
+**Best approach:** Command Palette (`Ctrl+K`)
+1. Press `Ctrl+K`
+2. Type part of the name
+3. Select from results
+
+### Finding Documents by Type
+
+**Best approach:** Tags
+1. Go to Tags page
+2. Click the document type tag
+3. Browse results
+
+### Finding Recent Work
+
+**Best approach:** Dashboard or Quick Access
+1. Check Dashboard "Recent Documents"
+2. Or use Quick Access > Recent
+
+### Finding Within a Project
+
+**Best approach:** Project filter
+1. Go to Documents
+2. Filter by project
+3. Use search within those results
+
+### Finding by Status
+
+**Best approach:** Status filter
+1. Go to Documents
+2. Filter by status (Draft, Published, etc.)
+3. Add other filters as needed
+
+---
+
+## Keyboard Shortcuts for Search
+
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+K` / `Cmd+K` | Open command palette |
+| `Esc` | Close command palette / Clear focus |
+| `Enter` | Select first/highlighted result |
+| `↑` / `↓` | Navigate results |
+| `/` | Focus search bar (in some contexts) |
+
+---
+
+## Best Practices
+
+### Efficient Searching
+
+1. **Start with Command Palette** — Fastest for known documents
+2. **Use filters first** — Narrow the set, then search
+3. **Be specific** — More specific = fewer results to scan
+4. **Learn shortcuts** — Keyboard is faster than mouse
+
+### Organizing for Findability
+
+1. **Good names** — Clear, descriptive document names
+2. **Consistent tags** — Use your organization's tag standards
+3. **Accurate projects** — Assign to correct projects
+4. **Status updates** — Keep status current
+
+### When You Can't Find Something
+
+1. Check all filters are cleared
+2. Try different search terms
+3. Check your project access
+4. Ask if document was renamed/moved
+5. Contact administrator if deleted
+
+---
+
+## Troubleshooting
+
+### No Results Found
+
+**Check:**
+- Spelling of search terms
+- Filters aren't too restrictive
+- You have access to the document's project
+
+### Too Many Results
+
+**Try:**
+- More specific search terms
+- Add filters (status, project)
+- Use tags to narrow down
+
+### Search Not Working
+
+**Try:**
+- Refresh the page
+- Clear browser cache
+- Check internet connection
+
+### Command Palette Empty
+
+**Check:**
+- Try typing something
+- Keyboard shortcut is correct
+- JavaScript is enabled in browser
+
+---
+
+## Advanced Features
+
+### Saved Searches
+
+> **Note:** This feature is planned for a future release.
+
+Future capability:
+- Save frequently used filter combinations
+- Quick access to common searches
+- Share searches with team
+
+### Full-Text Content Search
+
+> **Note:** Check with your administrator for availability.
+
+If enabled, search may also look inside:
+- PDF documents
+- Office documents
+- Text files
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Documents | [Documents](documents.md) |
+| Tags | [Tags](tags.md) |
+| Dashboard | [Dashboard](dashboard.md) |
+| Keyboard shortcuts | [Keyboard Shortcuts](../reference/keyboard-shortcuts.md) |

@@ -1,0 +1,312 @@
+# Working with Documents
+
+A simple guide to managing your documents in Document Manager.
+
+---
+
+## Understanding Documents
+
+In Document Manager, a document is more than just a file. It includes:
+
+- **The file itself** — The actual content (PDF, Word doc, spreadsheet, etc.)
+- **Metadata** — Name, description, tags, and other information
+- **Versions** — History of all changes over time
+- **Comments** — Discussions and feedback from your team
+
+---
+
+## Browsing Documents
+
+### The Document List
+
+Click **Documents** in the sidebar to see all documents you have access to.
+
+{/* SCREENSHOT: documents-list-table.png
+     Capture the Documents page showing:
+     - Table view with multiple documents
+     - Columns: Name, Status, Tags, Modified date
+     - Pagination at bottom
+     - Filter toolbar at top
+     - Browser window: 1400x800
+*/}
+
+### Switching Views
+
+You can view documents as a table or as cards:
+
+- **Table View** — See more documents at once, good for scanning
+- **Grid View** — Larger previews, more visual
+
+{/* SCREENSHOT: view-toggle.png
+     Capture the view toggle buttons showing:
+     - Table view icon
+     - Grid view icon
+     - Current view highlighted
+*/}
+
+Click the view icons at the top right to switch.
+
+---
+
+## Creating a Document
+
+### Step by Step
+
+1. Go to **Documents**
+2. Click **Upload**
+3. Select or drag your file
+4. Fill in the details:
+
+| Field | Description | Required? |
+|-------|-------------|-----------|
+| **Name** | What to call this document | Yes |
+| **Description** | What the document is about | No |
+| **Project** | Which project it belongs to | Recommended |
+| **Tags** | Keywords for organization | No |
+
+5. Click **Upload**
+
+{/* SCREENSHOT: upload-complete.png
+     Capture either:
+     - The success message after upload
+     - Or the document appearing in the list
+*/}
+
+> **Tip:** Always add a description. It helps others (and future you) understand what the document contains.
+
+---
+
+## Document Details
+
+Click any document name to open its detail page.
+
+### The Overview Tab
+
+Shows all information about the document:
+
+{/* SCREENSHOT: document-overview-tab.png
+     Capture the Overview tab showing:
+     - Document name and description
+     - Status badge
+     - Project information
+     - Tags
+     - Created/Modified dates
+     - Created by / Modified by
+*/}
+
+### The Versions Tab
+
+Shows all versions of this document over time.
+
+[Learn more about versions →](../guide/versions.md)
+
+### The Comments Tab
+
+Shows all comments and discussions about this document.
+
+[Learn more about comments →](collaboration.md)
+
+---
+
+## Document Status
+
+Every document has a status that shows its current state:
+
+### Draft
+
+{/* SCREENSHOT: status-draft.png
+     Capture a document with Draft status showing:
+     - The Draft badge clearly visible
+     - Crop to focus on the status area
+*/}
+
+- Work in progress
+- Still being edited
+- Not finalized
+
+### Published
+
+{/* SCREENSHOT: status-published.png
+     Capture a document with Published status showing:
+     - The Published badge clearly visible
+*/}
+
+- Complete and approved
+- Ready for use
+- Final version
+
+### Archived
+
+{/* SCREENSHOT: status-archived.png
+     Capture a document with Archived status showing:
+     - The Archived badge clearly visible
+*/}
+
+- No longer active
+- Kept for historical reference
+- Can be restored if needed
+
+---
+
+## Changing Status
+
+If you have permission:
+
+1. Open the document
+2. Click **Edit**
+3. Change the status dropdown
+4. Save
+
+Common status workflows:
+
+```
+Draft → Published (when complete)
+Published → Archived (when no longer needed)
+Archived → Draft (to revive for updates)
+```
+
+---
+
+## Using Tags
+
+Tags are labels that help organize and find documents.
+
+### Good Tag Examples
+
+| Tag | Purpose |
+|-----|---------|
+| `contract` | Legal documents |
+| `2024` | Year for reference |
+| `urgent` | Needs immediate attention |
+| `client-abc` | Related to a specific client |
+| `final` | Finalized documents |
+
+### Adding Tags
+
+1. Open the document
+2. Click **Edit**
+3. Type in the Tags field
+4. Press Enter after each tag
+5. Save
+
+### Finding by Tag
+
+1. Go to **Tags** in the sidebar
+2. Click any tag to see related documents
+
+Or use the filter on the Documents page.
+
+---
+
+## Editing Document Information
+
+You can update a document's metadata at any time:
+
+1. Open the document
+2. Click **Edit** or click on a field to edit inline
+3. Make your changes:
+   - Name
+   - Description
+   - Status
+   - Tags
+4. Save
+
+{/* SCREENSHOT: document-edit-mode.png
+     Capture the document in edit mode showing:
+     - Editable fields
+     - Save/Cancel buttons
+     - Fields highlighted as editable
+*/}
+
+> **Note:** Editing metadata does not create a new version. Only uploading a new file creates a version.
+
+---
+
+## Downloading Documents
+
+### Download the Current Version
+
+Click the **Download** button on the document page.
+
+### Download a Specific Version
+
+1. Go to the **Versions** tab
+2. Find the version you need
+3. Click the download icon
+
+---
+
+## Deleting Documents
+
+If you have permission:
+
+1. Open the document
+2. Click the **Delete** button (or find it in the menu)
+3. Confirm the deletion
+
+{/* SCREENSHOT: delete-confirmation.png
+     Capture the delete confirmation dialog showing:
+     - Warning message
+     - Confirm/Cancel buttons
+*/}
+
+> **Note:** Deleted documents are soft-deleted, meaning they can be recovered by an administrator if needed.
+
+---
+
+## Tips for Good Document Management
+
+### Naming Conventions
+
+Use clear, consistent names:
+
+| Instead of | Use |
+|------------|-----|
+| `doc1.pdf` | `Q4-Sales-Report-2024.pdf` |
+| `final_final_v2.docx` | `Project-Proposal-v3.docx` |
+| `notes.txt` | `Meeting-Notes-2024-01-15.txt` |
+
+### Descriptions
+
+Write descriptions that answer:
+- What is this document?
+- What is it used for?
+- Any important context?
+
+### Tags Strategy
+
+Agree with your team on standard tags:
+- By type: `contract`, `report`, `proposal`
+- By year: `2024`, `2025`
+- By status: `urgent`, `review-needed`
+- By department: `sales`, `engineering`, `hr`
+
+---
+
+## Common Questions
+
+### Can I upload multiple files at once?
+
+Currently, documents are uploaded one at a time. Each document is tracked separately with its own versions and comments.
+
+### What file types are supported?
+
+Document Manager accepts all common file types: PDFs, Office documents, images, and more. Check with your administrator for any specific restrictions.
+
+### How large can files be?
+
+File size limits are set by your administrator. If you receive an error about file size, try compressing the file or contact your admin.
+
+### Can I move a document to a different project?
+
+Yes, edit the document and change the Project field.
+
+---
+
+## Next Steps
+
+| Learn About | Guide |
+|-------------|-------|
+| Version control | [Versions Guide](../guide/versions.md) |
+| Working with your team | [Collaboration](collaboration.md) |
+| Projects | [Projects](projects.md) |

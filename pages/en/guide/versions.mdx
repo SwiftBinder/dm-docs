@@ -1,0 +1,380 @@
+# Version Control
+
+Complete guide to managing document versions — tracking changes, comparing, and rolling back.
+
+---
+
+## Understanding Versions
+
+Every time you upload a new file for a document, a new version is created. The previous version is preserved, creating a complete history.
+
+### Why Version Control Matters
+
+- **Track changes** — See exactly what changed and when
+- **Accountability** — Know who made each change
+- **Recovery** — Go back to any previous version
+- **Compliance** — Maintain audit trail for regulations
+
+### Version vs Edit
+
+| Action | Creates New Version? |
+|--------|---------------------|
+| Upload new file | Yes |
+| Change name | No |
+| Change description | No |
+| Change status | No |
+| Change tags | No |
+
+Only uploading a new file creates a version.
+
+---
+
+## Viewing Version History
+
+### Accessing Versions
+
+1. Open any document
+2. Click the **Versions** tab
+
+{/* SCREENSHOT: versions-tab.png
+     Capture the Versions tab showing:
+     - List of versions (v1, v2, v3, etc.)
+     - Version numbers
+     - Upload dates
+     - Who uploaded each version
+     - Change summaries
+     - Download icons
+     - Upload New Version button
+*/}
+
+### Version List
+
+Each version entry shows:
+
+| Field | Description |
+|-------|-------------|
+| **Version Number** | v1, v2, v3... |
+| **Date** | When it was uploaded |
+| **Uploaded By** | Who created this version |
+| **Change Summary** | Description of what changed |
+| **File Size** | Size of this version |
+| **Actions** | Download, rollback options |
+
+### Version Ordering
+
+Versions are listed newest first (most recent at top).
+
+---
+
+## Creating New Versions
+
+### When to Create a Version
+
+Create a new version when:
+- You've made changes to the file content
+- You have an updated version from external editing
+- Someone has revised the document
+
+### Upload Process
+
+1. Open the document
+2. Go to the **Versions** tab
+3. Click **Upload New Version**
+
+{/* SCREENSHOT: upload-version-dialog.png
+     Capture the version upload dialog showing:
+     - File upload area
+     - Change summary field (textarea)
+     - Upload button
+     - Cancel button
+*/}
+
+4. Select or drag your file
+5. Write a **Change Summary** (what changed)
+6. Click **Upload**
+
+### Change Summary Best Practices
+
+Good change summaries:
+```
+"Updated Q4 figures based on final sales data"
+"Fixed typos reported in review"
+"Added new section 3.2 on compliance requirements"
+"Revised budget per client feedback"
+```
+
+Poor change summaries:
+```
+"Updates"
+"New version"
+"Changes"
+""  (blank)
+```
+
+---
+
+## Version Numbering
+
+### Standard Numbering
+
+By default, versions use simple sequential numbers:
+
+```
+v1 → v2 → v3 → v4 → ...
+```
+
+### Semantic Versioning
+
+Some organizations use semantic versioning (major.minor.patch):
+
+```
+v1.0.0 → v1.0.1 → v1.1.0 → v2.0.0
+```
+
+| Change Type | Example | Meaning |
+|-------------|---------|---------|
+| Major | v1.0 → v2.0 | Significant changes |
+| Minor | v1.0 → v1.1 | New content/features |
+| Patch | v1.0.0 → v1.0.1 | Small fixes |
+
+> **Note:** Version numbering style is configured by your administrator.
+
+---
+
+## Downloading Versions
+
+### Download Current Version
+
+On the document page, click the main **Download** button.
+
+### Download a Specific Version
+
+1. Go to the **Versions** tab
+2. Find the version you want
+3. Click the download icon (↓) for that version
+
+{/* SCREENSHOT: version-download-icon.png
+     Capture a version row showing:
+     - The download icon clearly visible
+     - Version number for context
+*/}
+
+### Downloaded File
+
+The file downloads with its original name and format.
+
+---
+
+## Rolling Back
+
+### What is Rollback?
+
+Rollback creates a new version that is a copy of an older version. It doesn't delete any versions — it just makes an old version current again.
+
+### Rollback Process
+
+1. Go to the **Versions** tab
+2. Find the version you want to restore
+3. Click the **Rollback** button (or menu option)
+4. Confirm the rollback
+
+{/* SCREENSHOT: rollback-button.png
+     Capture a version row showing:
+     - The rollback button or option
+     - Version number being rolled back to
+*/}
+
+### What Happens
+
+```
+Before rollback:
+v1 → v2 → v3 (current)
+
+Roll back to v1:
+v1 → v2 → v3 → v4 (copy of v1, now current)
+
+All versions preserved!
+```
+
+### When to Use Rollback
+
+- An update introduced errors
+- The wrong file was uploaded
+- You need to restore an earlier state
+- A change needs to be undone
+
+### Rollback vs Download
+
+| Method | Result |
+|--------|--------|
+| Rollback | Creates new version, old version becomes current |
+| Download | Gets file, you can edit externally, upload as new version |
+
+Rollback is simpler when you just want to go back exactly.
+
+---
+
+## Version Comparison
+
+> **Note:** This feature is planned for a future release.
+
+### Future Capability
+
+Compare two versions to see:
+- What was added
+- What was removed
+- What was changed
+
+This is especially useful for text documents.
+
+### Current Workaround
+
+1. Download both versions
+2. Use external comparison tools (Word Compare, diff tools)
+3. Review changes manually
+
+---
+
+## Version Integrity
+
+### Checksums
+
+Each version has a checksum (SHA-256) that verifies file integrity.
+
+### Why It Matters
+
+- Confirms the file hasn't been corrupted
+- Ensures what you download matches what was uploaded
+- Required for compliance in some industries
+
+### Checking Integrity
+
+Advanced users can compare checksums. Contact your administrator for details on your organization's integrity verification process.
+
+---
+
+## Version Retention
+
+### How Long Versions Are Kept
+
+All versions are kept indefinitely by default.
+
+### Storage Considerations
+
+- Each version uses storage space
+- Old versions count toward storage limits
+- Administrators may implement retention policies
+
+### Pruning (If Available)
+
+Some configurations allow:
+- Archiving old versions
+- Compressing version storage
+- Retaining only recent versions
+
+Check with your administrator for your organization's policy.
+
+---
+
+## Best Practices
+
+### Version Discipline
+
+1. **Always add change summaries** — Future you will appreciate it
+2. **Don't create unnecessary versions** — Combine small changes
+3. **Review before uploading** — Make sure it's the right file
+4. **Use meaningful descriptions** — "Fixed tables in section 3" not "updates"
+
+### Version Workflow
+
+```
+1. Download current version
+       ↓
+2. Make changes in your application
+       ↓
+3. Save the updated file
+       ↓
+4. Upload as new version with change summary
+       ↓
+5. Notify team via comments if needed
+```
+
+### Team Coordination
+
+- Check for new versions before editing
+- Communicate about who's working on what
+- Use comments to discuss changes
+- Avoid simultaneous edits to the same document
+
+---
+
+## Troubleshooting
+
+### Can't See Versions Tab
+
+**Possible causes:**
+- You don't have document access
+- The document was just created (only v1 exists)
+- UI issue — try refreshing
+
+### Version Upload Failed
+
+**Try:**
+- Check file size limits
+- Verify file type is allowed
+- Ensure stable internet connection
+- Try again in a few moments
+
+### Wrong File Uploaded
+
+**Solution:**
+1. Use Rollback to go back to previous version
+2. Or upload the correct file as a new version
+3. Add a note in comments about the mistake
+
+### Rollback Not Working
+
+**Check:**
+- You have edit permission
+- The document isn't locked
+- Contact admin if the issue persists
+
+---
+
+## Advanced Topics
+
+### Version Metadata
+
+Each version stores:
+
+| Metadata | Description |
+|----------|-------------|
+| Version number | Sequential identifier |
+| Timestamp | Exact upload time |
+| User ID | Who uploaded it |
+| File path | Storage location |
+| File size | Size in bytes |
+| Checksum | SHA-256 hash |
+| Change summary | User's description |
+
+### API Access
+
+Developers can access version history via API:
+
+```
+GET /api/v1/documents/{id}/versions
+GET /api/v1/documents/{id}/versions/{number}
+POST /api/v1/documents/{id}/versions/{number}/rollback
+```
+
+See API documentation for details.
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Document management | [Documents](documents.md) |
+| Comments on versions | [Comments](comments.md) |
+| Future version features | [Planned Features](../future/planned-features.md) |

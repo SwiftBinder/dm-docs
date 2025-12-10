@@ -1,0 +1,296 @@
+# Authentication
+
+Complete guide to logging in, managing sessions, and security features.
+
+---
+
+## Logging In
+
+### Standard Login
+
+1. Navigate to your Document Manager URL
+2. Enter your **email address**
+3. Enter your **password**
+4. Click **Sign In**
+
+{/* SCREENSHOT: login-form-annotated.png
+     Capture the login page with clear view of:
+     - Email input field with label
+     - Password input field with label
+     - Sign In button
+     - Any "forgot password" or help links
+     - Browser window: 1200x800
+*/}
+
+### After Successful Login
+
+You will be redirected to the Dashboard — your home screen in Document Manager.
+
+{/* SCREENSHOT: post-login-dashboard.png
+     Capture the dashboard immediately after login showing:
+     - Full dashboard layout
+     - User avatar/name visible in top-right
+     - Sidebar navigation
+*/}
+
+### Login Errors
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| "Invalid credentials" | Wrong email or password | Check your email and password, try again |
+| "Account disabled" | Your account is deactivated | Contact your administrator |
+| "Too many attempts" | Multiple failed logins | Wait a few minutes, then try again |
+
+---
+
+## Session Management
+
+### How Sessions Work
+
+When you log in, Document Manager creates a session that keeps you authenticated. This session:
+
+- Remains active while you use the application
+- Refreshes automatically in the background
+- Expires after a period of inactivity (configured by admin)
+
+### Session Tokens
+
+Document Manager uses JWT (JSON Web Tokens) for authentication:
+
+| Token Type | Purpose | Duration |
+|------------|---------|----------|
+| **Access Token** | Used for API requests | Short-lived (minutes) |
+| **Refresh Token** | Used to get new access tokens | Longer-lived (hours/days) |
+
+> **Technical Note:** Tokens are stored in your browser's local storage and automatically refreshed when needed.
+
+---
+
+## Staying Logged In
+
+### Automatic Token Refresh
+
+You don't need to do anything — the system automatically refreshes your session:
+
+1. When your access token nears expiration
+2. The system uses your refresh token to get a new access token
+3. You continue working without interruption
+
+### Session Expiration
+
+Your session will expire if:
+
+- You explicitly log out
+- Your refresh token expires (after extended inactivity)
+- An administrator invalidates your session
+- You clear your browser data
+
+When expired, you'll be redirected to the login page.
+
+---
+
+## Logging Out
+
+### How to Log Out
+
+1. Click your **profile avatar** in the top-right corner
+2. Click **Log out** from the dropdown menu
+
+{/* SCREENSHOT: logout-menu.png
+     Capture the user menu dropdown showing:
+     - User avatar/name
+     - Menu items including "Log out"
+     - Clear view of the logout option
+*/}
+
+### What Happens on Logout
+
+- Your session tokens are cleared
+- You're redirected to the login page
+- No cached data remains accessible
+
+> **Security Tip:** Always log out when using a shared or public computer.
+
+---
+
+## Changing Your Password
+
+### Steps to Change Password
+
+1. Click your **profile avatar** in the top-right
+2. Go to **Settings**
+3. Find the **Security** section
+4. Click **Change Password**
+
+{/* SCREENSHOT: change-password-dialog.png
+     Capture the change password dialog showing:
+     - Current password field
+     - New password field
+     - Confirm password field
+     - Save/Cancel buttons
+*/}
+
+5. Enter your **current password**
+6. Enter your **new password**
+7. Confirm the new password
+8. Click **Save** or **Change Password**
+
+### Password Requirements
+
+| Requirement | Minimum |
+|-------------|---------|
+| Length | 8 characters |
+| Complexity | Varies by system configuration |
+
+> **Note:** Your administrator may set additional password requirements.
+
+---
+
+## Security Best Practices
+
+### Password Security
+
+- **Use a strong password** — Mix letters, numbers, and symbols
+- **Don't reuse passwords** — Use unique passwords for each system
+- **Consider a password manager** — Tools like 1Password or Bitwarden help
+
+### Session Security
+
+- **Log out on shared devices** — Always log out when done
+- **Don't share credentials** — Each user should have their own account
+- **Report suspicious activity** — Tell your admin if you see unexpected logins
+
+### Browser Security
+
+- **Keep your browser updated** — Security patches are important
+- **Be cautious with extensions** — Some can access page data
+- **Use private/incognito mode** — For temporary access on shared computers
+
+---
+
+## Multiple Devices
+
+### Logging in from Multiple Devices
+
+You can be logged in from multiple devices simultaneously:
+
+- Desktop computer at work
+- Laptop at home
+- Mobile browser (if supported)
+
+Each device maintains its own session.
+
+### Session Conflicts
+
+If an administrator needs to revoke sessions:
+
+- All devices will be logged out
+- You'll need to log in again on each device
+
+---
+
+## Troubleshooting Authentication
+
+### "Session Expired" Message
+
+**Cause:** Your session has timed out or been invalidated.
+
+**Solution:**
+1. Click the login link
+2. Log in again with your credentials
+3. You'll return to the Dashboard
+
+### Stuck in Login Loop
+
+**Cause:** Browser caching or cookie issues.
+
+**Solution:**
+1. Clear your browser cache and cookies for this site
+2. Or try an incognito/private window
+3. Log in again
+
+### Forgot Password
+
+**Current Process:**
+1. Contact your system administrator
+2. They will reset your password or send a reset link
+
+> **Note:** Self-service password reset may be added in a future version.
+
+### Account Locked
+
+**Cause:** Too many failed login attempts.
+
+**Solution:**
+1. Wait for the lockout period to end (usually 15-30 minutes)
+2. Or contact your administrator for immediate unlock
+
+---
+
+## For Administrators
+
+### User Account Management
+
+See the [User Management Guide](../admin/user-management.md) for:
+
+- Creating user accounts
+- Resetting passwords
+- Activating/deactivating accounts
+
+### Security Configuration
+
+Administrators can configure:
+
+- Session timeout duration
+- Password complexity requirements
+- Account lockout policies
+- Token expiration times
+
+These are set in the system configuration.
+
+---
+
+## Technical Reference
+
+### Token Storage
+
+| Item | Location | Purpose |
+|------|----------|---------|
+| Access Token | localStorage | API authentication |
+| Refresh Token | localStorage | Session refresh |
+
+### API Authentication
+
+All API requests include the access token:
+
+```
+Authorization: Bearer <access_token>
+```
+
+The frontend handles this automatically via Axios interceptors.
+
+### Token Refresh Flow
+
+```
+1. API request returns 401 Unauthorized
+       ↓
+2. Interceptor catches the error
+       ↓
+3. Refresh token sent to /api/v1/auth/refresh
+       ↓
+4. New access token received
+       ↓
+5. Original request retried with new token
+       ↓
+6. User continues working seamlessly
+```
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| User settings | [Settings](settings.md) |
+| User management (admin) | [User Management](../admin/user-management.md) |
+| Roles and permissions | [Roles & Permissions](../reference/roles-permissions.md) |

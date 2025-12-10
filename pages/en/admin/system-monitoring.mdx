@@ -1,0 +1,366 @@
+# System Monitoring
+
+Complete guide to monitoring Document Manager — activity logs, audit trails, and system health.
+
+---
+
+## Overview
+
+As an administrator, you have access to system-wide monitoring capabilities to ensure security, compliance, and smooth operation.
+
+{/* SCREENSHOT: admin-activities-full.png
+     Capture the Activities page as admin showing:
+     - Full system activity view
+     - All activity types
+     - Filter options
+     - Timeline of events
+*/}
+
+---
+
+## Activity Monitoring
+
+### System-Wide Activity
+
+Unlike regular users, administrators see all system activity:
+
+| What Admins See | What Users See |
+|-----------------|----------------|
+| All documents | Only accessible documents |
+| All users' actions | Only related actions |
+| All projects | Only member projects |
+| All comments | Only accessible comments |
+
+### Accessing Activity Logs
+
+1. Click **Activities** in the sidebar
+2. View the complete activity timeline
+3. Use filters to focus on specific areas
+
+---
+
+## Activity Types to Monitor
+
+### Security-Relevant Events
+
+| Event | Why Important |
+|-------|---------------|
+| Login attempts | Detect unauthorized access |
+| Failed logins | Identify attacks |
+| Password changes | Security awareness |
+| Role changes | Permission creep |
+| Account deactivations | Access removal |
+
+### Document Events
+
+| Event | Why Important |
+|-------|---------------|
+| Mass downloads | Data exfiltration |
+| Deletions | Unauthorized removal |
+| Uploads to sensitive projects | Access control |
+| Version rollbacks | Understanding reversals |
+
+### Administrative Events
+
+| Event | Why Important |
+|-------|---------------|
+| User creation | Onboarding tracking |
+| Permission changes | Access audit |
+| Project modifications | Governance |
+| System configuration | Change management |
+
+---
+
+## Filtering and Analysis
+
+### Available Filters
+
+{/* SCREENSHOT: admin-activity-filters.png
+     Capture the filter options showing:
+     - Resource type filter
+     - Date range
+     - User filter
+     - Event type filter
+*/}
+
+| Filter | Use For |
+|--------|---------|
+| **Resource Type** | Focus on documents, projects, users |
+| **Date Range** | Investigate specific periods |
+| **User** | Audit specific user activity |
+| **Event Type** | Filter to specific actions |
+
+### Filter Strategies
+
+**Security Review:**
+- Filter: Login events
+- Date: Last 7 days
+- Look for: Failed attempts, unusual times
+
+**Document Audit:**
+- Filter: Documents
+- Event: Downloads, deletions
+- Look for: Mass actions, sensitive files
+
+**User Audit:**
+- Filter: Specific user
+- Date: Employment period
+- Look for: All activity during tenure
+
+---
+
+## Audit Trail
+
+### What Gets Logged
+
+Every activity record includes:
+
+| Field | Description |
+|-------|-------------|
+| **Timestamp** | Exact date and time (with timezone) |
+| **User** | Who performed the action |
+| **Event Type** | What type of action |
+| **Resource** | What was affected |
+| **Details** | Additional context |
+| **IP Address** | Where action originated |
+
+### Log Retention
+
+| Aspect | Typical Policy |
+|--------|----------------|
+| Duration | Check with your organization |
+| Storage | System database |
+| Archive | May be available |
+| Export | Check system capabilities |
+
+### Compliance Use
+
+Activity logs support:
+- SOC 2 compliance
+- GDPR data access tracking
+- Internal audit requirements
+- Security incident investigation
+
+---
+
+## Notification Count
+
+### Unread Notifications
+
+Monitor the notification count for:
+- System alerts
+- Important events
+- User-reported issues
+
+{/* SCREENSHOT: notification-count.png
+     Capture the notification bell showing:
+     - Unread count badge
+*/}
+
+---
+
+## System Health
+
+### Health Indicators
+
+> **Note:** Detailed health monitoring may require backend access.
+
+### Application Health
+
+| Check | What It Means |
+|-------|---------------|
+| **API Response** | Backend is functioning |
+| **Login Success** | Authentication working |
+| **Upload Success** | Storage is operational |
+| **Search Works** | Database is responsive |
+
+### Monitoring Approach
+
+1. Regularly test key functions
+2. Watch for user-reported issues
+3. Check activity for error patterns
+4. Monitor system performance
+
+---
+
+## Security Monitoring
+
+### Suspicious Activity Patterns
+
+| Pattern | Possible Issue |
+|---------|----------------|
+| Multiple failed logins | Brute force attempt |
+| Off-hours activity | Unauthorized access |
+| Mass downloads | Data exfiltration |
+| Unusual role changes | Privilege escalation |
+| Rapid deletions | Malicious destruction |
+
+### What to Do
+
+When suspicious activity detected:
+
+1. **Document** — Note the pattern
+2. **Investigate** — Check user, context
+3. **Contain** — Deactivate account if needed
+4. **Report** — Follow incident procedure
+5. **Remediate** — Fix vulnerabilities
+6. **Review** — Update monitoring
+
+---
+
+## Regular Monitoring Tasks
+
+### Daily
+
+- [ ] Check notification count
+- [ ] Review recent activity summary
+- [ ] Look for failed login patterns
+- [ ] Verify system is responsive
+
+### Weekly
+
+- [ ] Review all security events
+- [ ] Check for unusual activity patterns
+- [ ] Review new user activity
+- [ ] Verify deactivated users are inactive
+
+### Monthly
+
+- [ ] Full access audit
+- [ ] Role appropriateness review
+- [ ] Storage utilization check
+- [ ] Inactive user identification
+
+### Quarterly
+
+- [ ] Comprehensive security review
+- [ ] Compliance audit preparation
+- [ ] Policy effectiveness review
+- [ ] Documentation update
+
+---
+
+## Reporting
+
+### Activity Reports
+
+Create reports for:
+- Security audits
+- Compliance requirements
+- Management reviews
+- Incident investigations
+
+### Report Contents
+
+| Report Type | Include |
+|-------------|---------|
+| **Security** | Logins, failed attempts, admin actions |
+| **Usage** | Document activity, user engagement |
+| **Compliance** | Access history, permission changes |
+| **Incident** | Specific event timeline |
+
+### Export Options
+
+Check your system for:
+- CSV export
+- PDF reports
+- API access for automation
+- Integration with SIEM tools
+
+---
+
+## Incident Response
+
+### When You Detect an Issue
+
+1. **Assess severity**
+   - Is data at risk?
+   - Is access compromised?
+   - How many users affected?
+
+2. **Contain immediately**
+   - Deactivate compromised accounts
+   - Revoke suspicious sessions
+   - Block further damage
+
+3. **Investigate thoroughly**
+   - Review activity logs
+   - Identify scope
+   - Determine root cause
+
+4. **Document everything**
+   - Timeline of events
+   - Actions taken
+   - Evidence preserved
+
+5. **Report appropriately**
+   - Follow organizational procedure
+   - Notify stakeholders
+   - Regulatory notifications if required
+
+6. **Remediate and improve**
+   - Fix vulnerabilities
+   - Update policies
+   - Enhance monitoring
+
+---
+
+## Best Practices
+
+### Proactive Monitoring
+
+- Don't wait for problems
+- Regular log reviews
+- Baseline normal activity
+- Alert on anomalies
+
+### Documentation
+
+- Keep monitoring procedures documented
+- Record incidents and responses
+- Maintain audit evidence
+- Update as system changes
+
+### Automation
+
+Consider:
+- Automated alerts for key events
+- Scheduled report generation
+- Integration with security tools
+- Dashboard for quick overview
+
+---
+
+## Troubleshooting Monitoring
+
+### Activities Not Loading
+
+**Check:**
+- Internet connection
+- User permissions (must be admin)
+- Browser console for errors
+
+### Missing Activity Data
+
+**Check:**
+- Date range filters
+- Resource type filters
+- Data retention settings
+
+### Can't Export Data
+
+**Check:**
+- Export feature availability
+- Browser download settings
+- File size limits
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Admin overview | [Admin Overview](overview.md) |
+| User management | [User Management](user-management.md) |
+| Activities guide | [Activities](../guide/activities.md) |
+| Troubleshooting | [Troubleshooting](../reference/troubleshooting.md) |

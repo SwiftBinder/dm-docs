@@ -1,0 +1,428 @@
+# User Management
+
+Complete guide to managing user accounts — creating, editing, and maintaining users.
+
+---
+
+## Overview
+
+User management is a core administrator responsibility. This guide covers creating users, assigning roles, and handling the full user lifecycle.
+
+{/* SCREENSHOT: users-page.png
+     Capture the Users management page showing:
+     - User list table
+     - Create User button
+     - Filter/search options
+     - User statistics
+     - Browser window: 1400x800
+*/}
+
+---
+
+## Accessing User Management
+
+1. Click **Users** in the sidebar (Admin only)
+2. You'll see the user list and management options
+
+### User List Overview
+
+| Column | Shows |
+|--------|-------|
+| **Name** | Display name |
+| **Email** | Email address |
+| **Role** | Permission level |
+| **Status** | Active/Inactive |
+| **Actions** | Edit, deactivate options |
+
+---
+
+## User Statistics
+
+At the top of the Users page:
+
+{/* SCREENSHOT: user-stats.png
+     Capture the user statistics showing:
+     - Total Users count
+     - Active Users count
+     - Admins count
+     - Other stats if available
+*/}
+
+| Statistic | Description |
+|-----------|-------------|
+| **Total Users** | All registered accounts |
+| **Active** | Currently active users |
+| **Admins** | Users with admin role |
+| **Filtered** | Results matching current filter |
+
+---
+
+## Creating Users
+
+### Create User Process
+
+1. Go to **Users**
+2. Click **Create User**
+
+{/* SCREENSHOT: create-user-dialog.png
+     Capture the Create User dialog showing:
+     - Email field
+     - Username field
+     - Display name field
+     - Role dropdown
+     - Password field (or generate option)
+     - Create button
+*/}
+
+3. Fill in user details:
+
+| Field | Description | Required |
+|-------|-------------|----------|
+| **Email** | User's email address | Yes |
+| **Username** | Login identifier | Yes |
+| **Display Name** | Name shown in app | Yes |
+| **Role** | Permission level | Yes |
+| **Password** | Initial password | Yes |
+
+4. Click **Create**
+
+### Role Selection
+
+| Role | Typical Use |
+|------|-------------|
+| **Viewer** | Read-only access |
+| **User** | Standard document work |
+| **Project Manager** | Team and project leadership |
+| **Admin** | System administration |
+
+### Password Options
+
+When creating users:
+- Set a temporary password
+- Instruct user to change on first login
+- Or use password generation if available
+
+### Post-Creation Steps
+
+After creating a user:
+1. Communicate credentials securely
+2. Add to appropriate teams
+3. Provide documentation links
+4. Verify they can log in
+
+---
+
+## Editing Users
+
+### Accessing User Edit
+
+1. Find the user in the list
+2. Click **Edit** (or the edit icon)
+
+{/* SCREENSHOT: edit-user-dialog.png
+     Capture the Edit User dialog showing:
+     - Editable fields
+     - Current values
+     - Save button
+*/}
+
+### Editable Fields
+
+| Field | Can Edit? | Notes |
+|-------|-----------|-------|
+| **Display Name** | Yes | |
+| **Username** | Sometimes | May be locked |
+| **Email** | Sometimes | May require verification |
+| **Role** | Yes | See role change section |
+
+### Changing User Roles
+
+To change a user's role:
+1. Edit the user
+2. Select new role from dropdown
+3. Save
+
+**Important considerations:**
+- Changing to Admin grants full access
+- Changing from Admin removes elevated access
+- Role changes take effect immediately
+
+---
+
+## Deactivating Users
+
+### When to Deactivate
+
+- Employee leaves the organization
+- Account no longer needed
+- Security concern
+- Temporary suspension
+
+### Deactivation Process
+
+1. Find the user
+2. Click **Deactivate** (or toggle status)
+3. Confirm the action
+
+{/* SCREENSHOT: deactivate-user-confirm.png
+     Capture the deactivation confirmation showing:
+     - Warning message
+     - User name
+     - Confirm/Cancel buttons
+*/}
+
+### What Happens
+
+When a user is deactivated:
+- They cannot log in
+- Existing sessions are invalidated
+- Their data remains intact
+- They keep project memberships (but can't access)
+
+### Deactivation vs Deletion
+
+| Aspect | Deactivate | Delete |
+|--------|------------|--------|
+| User can log in | No | No |
+| Data preserved | Yes | Depends on policy |
+| Reversible | Yes | Usually no |
+| Audit trail | Preserved | May be removed |
+
+**Recommendation:** Always prefer deactivation over deletion.
+
+---
+
+## Reactivating Users
+
+### When to Reactivate
+
+- Employee returns
+- Suspension ends
+- Account needed again
+
+### Reactivation Process
+
+1. Find the inactive user (may need to filter)
+2. Click **Activate** or toggle status
+3. Confirm
+
+The user can now log in again with existing credentials.
+
+---
+
+## Password Management
+
+### Resetting User Passwords
+
+If a user forgets their password:
+
+1. Find the user
+2. Click **Reset Password** or similar option
+3. Set a temporary password
+4. Communicate to user securely
+5. Instruct them to change immediately
+
+{/* SCREENSHOT: reset-password-option.png
+     Capture the password reset option showing:
+     - Reset Password button or menu item
+     - Or password field in edit dialog
+*/}
+
+### Password Security
+
+- Never send passwords via unencrypted email
+- Use temporary passwords that expire
+- Instruct users to change immediately
+- Don't store or write down user passwords
+
+---
+
+## Filtering and Searching
+
+### Search
+
+Type in the search box to find users by:
+- Name
+- Email
+- Username
+
+### Filters
+
+| Filter | Options |
+|--------|---------|
+| **Status** | Active, Inactive, All |
+| **Role** | Admin, Project Manager, User, Viewer |
+
+{/* SCREENSHOT: user-filters.png
+     Capture the filter area showing:
+     - Search input
+     - Role filter dropdown
+     - Status filter dropdown
+*/}
+
+### Finding Specific Users
+
+For quick lookup:
+1. Use the search box
+2. Type part of name or email
+3. Results filter immediately
+
+---
+
+## Bulk Operations
+
+### Current Support
+
+Most operations are per-user. For multiple users:
+- Process each individually
+- Consider team management for group access
+
+### Future Features
+
+Bulk operations (select multiple, batch edit) may be added in future releases.
+
+---
+
+## User Lifecycle Management
+
+### Standard User Lifecycle
+
+```
+1. Request for new user
+       ↓
+2. Create user account
+       ↓
+3. Assign role
+       ↓
+4. Add to teams
+       ↓
+5. Communicate credentials
+       ↓
+6. User works in system
+       ↓
+7. Role changes as needed
+       ↓
+8. Eventually: Deactivate account
+       ↓
+9. Archive/delete after retention period
+```
+
+### Onboarding Checklist
+
+- [ ] Create user account with correct email
+- [ ] Assign appropriate role
+- [ ] Add to department team
+- [ ] Add to project teams as needed
+- [ ] Send credentials securely
+- [ ] Provide documentation link
+- [ ] Verify successful login
+- [ ] Schedule training if needed
+
+### Offboarding Checklist
+
+- [ ] Receive offboarding notification
+- [ ] Deactivate account immediately
+- [ ] Review owned documents
+- [ ] Reassign ownership if needed
+- [ ] Remove from sensitive projects
+- [ ] Document the offboarding
+- [ ] Archive after retention period
+
+---
+
+## Best Practices
+
+### Account Creation
+
+- Verify identity before creating
+- Use company email addresses
+- Follow naming conventions
+- Assign minimum necessary role
+
+### Role Management
+
+- Regular role audits
+- Remove elevated access when not needed
+- Document role change reasons
+- Follow principle of least privilege
+
+### Account Maintenance
+
+- Periodic access reviews
+- Prompt deactivation of departing users
+- Monitor for inactive accounts
+- Clean up test accounts
+
+---
+
+## Troubleshooting
+
+### User Can't Log In
+
+**Check:**
+1. Account is active
+2. Password is correct
+3. Email/username is correct
+4. No account lockout
+
+**Solutions:**
+- Reset password
+- Reactivate if deactivated
+- Check for typos
+
+### Can't Create User
+
+**Check:**
+1. Email not already in use
+2. Username not already taken
+3. All required fields filled
+4. Valid email format
+
+### Role Change Not Working
+
+**Check:**
+1. Save was successful
+2. Page has been refreshed
+3. User logged out and back in
+
+### Can't Find User
+
+**Check:**
+1. Search spelling
+2. Filter settings (show inactive?)
+3. User actually exists
+
+---
+
+## Audit and Compliance
+
+### User Activity Tracking
+
+All user-related actions are logged:
+- Account creation
+- Role changes
+- Deactivation/activation
+- Password resets
+
+### Viewing User History
+
+Check the Activities section for user-related events.
+
+### Compliance Reporting
+
+For audits:
+- Export user lists
+- Review access logs
+- Document role assignments
+- Track deactivations
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Admin overview | [Admin Overview](overview.md) |
+| System monitoring | [System Monitoring](system-monitoring.md) |
+| Roles & permissions | [Roles & Permissions](../reference/roles-permissions.md) |
+| Teams | [Teams](../guide/teams.md) |

@@ -1,0 +1,484 @@
+# Planned Features
+
+Future capabilities being considered for Document Manager. We welcome your feedback!
+
+---
+
+## About This Section
+
+This section describes features that are **planned for future development**. These features are not yet available but are being considered based on user needs and business requirements.
+
+> **We Want Your Feedback!**
+>
+> Please review these planned features and share your thoughts:
+> - Which features are most important to you?
+> - Are there features missing that you need?
+> - How would you use these capabilities?
+>
+> Contact your project manager or system administrator with your feedback.
+
+---
+
+## Document Branching
+
+### What Is It?
+
+Git-like branching for documents — create parallel versions for different purposes without affecting the main document.
+
+### How It Would Work
+
+```
+Main Document (v1.0)
+    │
+    ├── Branch: "Legal Review"
+    │   └── v1.0.1, v1.0.2 (legal changes)
+    │
+    └── Branch: "Translation"
+        └── v1.0.1 (Spanish version)
+```
+
+### Use Cases
+
+| Scenario | How Branching Helps |
+|----------|---------------------|
+| Multiple reviewers | Each reviewer works on own branch |
+| Translations | Each language as a branch |
+| Client variations | Branch per client customization |
+| A/B testing | Different versions to compare |
+
+### Planned Features
+
+- Create branches from any version
+- Name branches meaningfully
+- Merge branches back to main
+- Compare branch differences
+- Track branch activity
+
+### Status
+
+**Planning Phase** — We're gathering requirements
+
+### Your Feedback Needed
+
+- Would you use branching?
+- What scenarios would you use it for?
+- How many branches per document would you need?
+
+---
+
+## Odoo ERP Integration
+
+### What Is It?
+
+Automatic synchronization with Odoo ERP system for users, projects, and potentially documents.
+
+### Planned Capabilities
+
+| Feature | Description |
+|---------|-------------|
+| **User Sync** | Import users from Odoo automatically |
+| **Project Sync** | Link projects to Odoo projects |
+| **SSO** | Single sign-on with Odoo credentials |
+| **Activity Sync** | Push document activity to Odoo |
+
+### How It Would Work
+
+```
+Odoo ERP                    Document Manager
+---------                   ----------------
+Users         ───────────>  User accounts
+Projects      ───────────>  Projects
+(Planned)     <───────────  Document activity
+```
+
+### Benefits
+
+- No duplicate user management
+- Consistent project structure
+- Unified authentication
+- Activity tracking across systems
+
+### Status
+
+**Infrastructure Ready** — Backend prepared, implementation planned
+
+### Your Feedback Needed
+
+- Do you use Odoo?
+- Which Odoo modules do you use?
+- What data would you want synchronized?
+
+---
+
+## Advanced Annotations
+
+### What Is It?
+
+Visual annotations directly on documents — highlight areas, add notes to specific locations.
+
+### Planned Features
+
+| Feature | Description |
+|---------|-------------|
+| **Highlight** | Mark areas of interest |
+| **Pin Comments** | Attach comments to specific spots |
+| **Drawing Tools** | Circles, arrows, boxes |
+| **Text Annotations** | Add text overlays |
+| **Page-Specific** | Comments tied to pages |
+
+### How It Would Work
+
+{/* SCREENSHOT-PLACEHOLDER: annotation-example
+     Future mockup showing:
+     - Document viewer with annotations overlay
+     - Highlight tools
+     - Comment pins on document
+*/}
+
+```
+┌─────────────────────────────────┐
+│  Document Viewer               │
+│  ┌───────────────────────────┐ │
+│  │                           │ │
+│  │   [📌 Comment here]       │ │
+│  │                           │ │
+│  │   ████ Highlighted text   │ │
+│  │                           │ │
+│  │   ──────> Arrow pointing  │ │
+│  │                           │ │
+│  └───────────────────────────┘ │
+│                                 │
+│  [Annotation Tools]             │
+└─────────────────────────────────┘
+```
+
+### Use Cases
+
+- Document reviews
+- Legal redlining
+- Design feedback
+- Training materials
+
+### Status
+
+**Conceptual** — Evaluating technical approaches
+
+### Your Feedback Needed
+
+- What document types need annotations?
+- What annotation tools are most important?
+- Do you need annotations preserved in downloads?
+
+---
+
+## Real-Time Collaboration
+
+### What Is It?
+
+See when others are viewing or editing the same document — avoid conflicts and work together.
+
+### Planned Features
+
+| Feature | Description |
+|---------|-------------|
+| **Presence** | See who's viewing a document |
+| **Live Cursors** | See where others are looking |
+| **Instant Updates** | See changes as they happen |
+| **Conflict Prevention** | Warnings before editing clashes |
+| **Chat** | Quick communication while viewing |
+
+### How It Would Work
+
+```
+Document: "Q4 Report"
+
+Currently viewing:
+  👤 John (editing)
+  👤 Sarah (viewing)
+  👤 Mike (viewing)
+
+⚠️ John is currently editing this document
+```
+
+### Status
+
+**Research Phase** — Evaluating WebSocket architecture
+
+### Your Feedback Needed
+
+- How often do you work on the same documents?
+- Would real-time presence help you?
+- Do you need in-app chat?
+
+---
+
+## Document Preview
+
+### What Is It?
+
+View documents directly in the browser without downloading.
+
+### Planned Support
+
+| File Type | Preview Capability |
+|-----------|-------------------|
+| PDF | Full preview with pages |
+| Images | View with zoom |
+| Office docs | Read-only preview |
+| Text files | Formatted display |
+| Markdown | Rendered preview |
+
+### How It Would Work
+
+Instead of downloading to view:
+1. Click document
+2. Preview opens in-browser
+3. Navigate pages, zoom, scroll
+4. Download only if needed
+
+### Status
+
+**Planned** — Evaluating preview libraries
+
+### Your Feedback Needed
+
+- Which file types do you most need to preview?
+- Is editing within preview needed?
+- Mobile preview important?
+
+---
+
+## Bulk Operations
+
+### What Is It?
+
+Perform actions on multiple documents at once.
+
+### Planned Features
+
+| Operation | Description |
+|-----------|-------------|
+| **Bulk Download** | Download multiple as ZIP |
+| **Bulk Move** | Move to different project |
+| **Bulk Tag** | Add/remove tags from many |
+| **Bulk Status** | Change status of many |
+| **Bulk Delete** | Delete multiple at once |
+
+### How It Would Work
+
+```
+☑️ Document 1
+☑️ Document 2
+☑️ Document 3
+☐ Document 4
+
+[Actions ▼]
+  - Download selected
+  - Move to project...
+  - Add tags...
+  - Change status...
+  - Delete selected
+```
+
+### Status
+
+**Planned** — UI design in progress
+
+### Your Feedback Needed
+
+- Which bulk operations do you need most?
+- How many documents would you typically select?
+- Any concerns about bulk delete safety?
+
+---
+
+## Export & Reporting
+
+### What Is It?
+
+Export data and generate reports from Document Manager.
+
+### Planned Features
+
+| Export Type | Description |
+|-------------|-------------|
+| **Document List** | Export as CSV/Excel |
+| **Activity Report** | Audit trail export |
+| **Project Summary** | Project status report |
+| **User Activity** | User engagement metrics |
+| **Storage Report** | Space usage analysis |
+
+### Report Formats
+
+- CSV
+- Excel (XLSX)
+- PDF reports
+- JSON (for integration)
+
+### Status
+
+**Planned** — Requirements gathering
+
+### Your Feedback Needed
+
+- What reports do you need?
+- Preferred format?
+- How often would you export?
+
+---
+
+## Advanced Search
+
+### What Is It?
+
+More powerful search capabilities beyond basic text search.
+
+### Planned Features
+
+| Feature | Description |
+|---------|-------------|
+| **Full-Text** | Search within document content |
+| **Filters** | Complex filter combinations |
+| **Saved Searches** | Save frequently used searches |
+| **Search History** | Access recent searches |
+| **Search Sharing** | Share search URLs |
+
+### How It Would Work
+
+```
+Search: contract AND (client-acme OR client-xyz)
+Filters: Status=Published, Year=2024
+Sort: Modified (newest)
+
+[Save this search] [Share]
+```
+
+### Status
+
+**Planned** — Backend indexing improvements needed
+
+### Your Feedback Needed
+
+- How important is content search?
+- Would you use saved searches?
+- What filter combinations do you need?
+
+---
+
+## Mobile Application
+
+### What Is It?
+
+Native mobile apps for iOS and Android.
+
+### Planned Features
+
+| Feature | Description |
+|---------|-------------|
+| **Browse** | View documents on mobile |
+| **Download** | Offline access |
+| **Upload** | Camera to document upload |
+| **Notifications** | Push notifications |
+| **Comments** | Add comments on-the-go |
+
+### Status
+
+**Under Consideration** — Evaluating demand
+
+### Your Feedback Needed
+
+- Would you use a mobile app?
+- What features are essential on mobile?
+- iOS, Android, or both?
+
+---
+
+## Integration APIs
+
+### What Is It?
+
+APIs for integrating Document Manager with other systems.
+
+### Planned Integrations
+
+| Integration | Description |
+|-------------|-------------|
+| **Webhooks** | Push events to external systems |
+| **OAuth** | Third-party authentication |
+| **Zapier/Make** | No-code automation |
+| **Microsoft 365** | Office integration |
+| **Google Workspace** | Google Docs integration |
+
+### API Capabilities
+
+- REST API (already available)
+- GraphQL (planned)
+- Webhook subscriptions
+- API documentation portal
+
+### Status
+
+**Partially Available** — REST API exists, enhancements planned
+
+### Your Feedback Needed
+
+- What systems do you need to integrate with?
+- Would you use webhooks?
+- Need no-code automation?
+
+---
+
+## Providing Feedback
+
+### How to Share Your Thoughts
+
+1. **Prioritize features** — Which are most important?
+2. **Describe use cases** — How would you use them?
+3. **Identify gaps** — What's missing?
+4. **Contact** — Reach out to your project manager or admin
+
+### Feedback Questions
+
+For each feature, consider:
+- Would this help your daily work?
+- How often would you use it?
+- What problems would it solve?
+- Any concerns or requirements?
+
+### What Happens Next
+
+Your feedback helps us:
+- Prioritize development
+- Shape feature design
+- Ensure we build what you need
+- Avoid unnecessary features
+
+---
+
+## Feature Request
+
+### Have an Idea?
+
+If you have a feature idea not listed here:
+
+1. Describe the feature
+2. Explain the use case
+3. Estimate how often you'd use it
+4. Share with your administrator
+
+We review all suggestions and consider them for the roadmap.
+
+---
+
+## Roadmap Disclaimer
+
+> **Note:** This roadmap represents our current thinking and is subject to change. Features may be added, modified, or removed based on technical feasibility, business priorities, and user feedback. No timeline is guaranteed.
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Current features | [Quick Start](../quick-start.md) |
+| Full feature guide | [Index](../index.md) |

@@ -1,0 +1,372 @@
+# Tags
+
+Complete guide to organizing documents with tags — creating, using, and managing tags effectively.
+
+---
+
+## Overview
+
+Tags are keywords or labels that help categorize and find documents. Unlike projects (which provide structure), tags provide flexible cross-cutting organization.
+
+{/* SCREENSHOT: tags-page-overview.png
+     Capture the Tags page showing:
+     - List of tags with usage counts
+     - Search/filter option
+     - Tag statistics (total tags, documents tagged)
+     - Overall layout
+     - Browser window: 1400x800
+*/}
+
+---
+
+## Understanding Tags
+
+### Tags vs Projects vs Folders
+
+| Organizing Method | Best For |
+|-------------------|----------|
+| **Projects** | Main organizational structure, access control |
+| **Tags** | Flexible categorization across projects |
+| **Folders** | Hierarchical organization within projects |
+
+### Tag Characteristics
+
+- A document can have **multiple tags**
+- Tags work **across projects**
+- Tags are **searchable and filterable**
+- Tags help with **discovery**
+
+### Example Use Cases
+
+| Tag | Purpose |
+|-----|---------|
+| `contract` | All legal contracts |
+| `2024` | Documents from 2024 |
+| `urgent` | Needs immediate attention |
+| `final` | Finalized versions |
+| `client-acme` | Specific client |
+| `quarterly-report` | Type of document |
+
+---
+
+## Viewing Tags
+
+### Tags Page
+
+Click **Tags** in the sidebar to see all tags in the system.
+
+{/* SCREENSHOT: tags-list.png
+     Capture the Tags list showing:
+     - Tag names
+     - Document counts per tag
+     - Search bar
+     - Sort options if available
+*/}
+
+### Tag Information
+
+Each tag shows:
+- **Tag name** — The keyword
+- **Usage count** — How many documents use this tag
+- **Click action** — Filter documents by this tag
+
+### Tag Statistics
+
+The Tags page may show:
+- Total number of tags
+- Total tagged documents
+- Most used tags
+
+---
+
+## Adding Tags to Documents
+
+### When Uploading
+
+1. In the upload dialog
+2. Find the **Tags** field
+3. Type a tag name
+4. Press **Enter** or **comma** to add
+5. Repeat for more tags
+
+{/* SCREENSHOT: tags-during-upload.png
+     Capture the upload dialog showing:
+     - Tags input field
+     - Tags being added
+     - Multiple tags visible
+*/}
+
+### When Editing
+
+1. Open the document
+2. Click **Edit**
+3. Find the Tags field
+4. Add or remove tags
+5. Save
+
+{/* SCREENSHOT: edit-document-tags.png
+     Capture the document edit mode showing:
+     - Tags field with existing tags
+     - Ability to add new tags
+     - Remove buttons on tags
+*/}
+
+### Tag Input Behavior
+
+- Type and press **Enter** to add
+- Or type and press **comma** to add
+- Click **X** on a tag to remove it
+- Tags are case-insensitive (usually)
+
+---
+
+## Removing Tags
+
+### From a Document
+
+1. Edit the document
+2. Click the **X** on the tag you want to remove
+3. Save
+
+### Tag Deletion
+
+When you remove a tag from all documents:
+- The tag may still appear in the system
+- Or it may be automatically cleaned up
+- Depends on system configuration
+
+---
+
+## Finding Documents by Tag
+
+### From the Tags Page
+
+1. Go to **Tags**
+2. Click on any tag
+3. See all documents with that tag
+
+{/* SCREENSHOT: documents-filtered-by-tag.png
+     Capture the Documents page showing:
+     - Documents filtered by a specific tag
+     - Clear indication of active filter
+*/}
+
+### From the Documents Page
+
+1. Go to **Documents**
+2. Use the search or filter
+3. Type the tag name
+4. Or use tag filter if available
+
+### Combining Tag Filters
+
+You may be able to:
+- Filter by multiple tags (AND/OR)
+- Combine with status and project filters
+- Use search along with tag filters
+
+---
+
+## Tag Analytics
+
+### Understanding Tag Usage
+
+The Tags page helps you understand:
+- Which tags are most used
+- Which documents are well-organized
+- Which tags might be redundant
+
+### Metrics Available
+
+| Metric | What It Shows |
+|--------|---------------|
+| **Document Count** | How many documents use this tag |
+| **Usage Trend** | Is tag usage increasing/decreasing |
+| **Related Tags** | Tags often used together |
+
+---
+
+## Tag Best Practices
+
+### Creating Good Tags
+
+**Do:**
+- Keep tags short and clear
+- Use consistent naming (lowercase, hyphens)
+- Create tags that will be reused
+- Think about searchability
+
+**Don't:**
+- Create overly specific tags
+- Use inconsistent formatting
+- Create tags used only once
+- Use spaces in tag names (use hyphens)
+
+### Tag Naming Conventions
+
+| Convention | Example |
+|------------|---------|
+| Lowercase | `contract` not `Contract` |
+| Hyphens for spaces | `client-name` not `client name` |
+| Singular form | `contract` not `contracts` |
+| Category prefixes | `type-report`, `client-acme` |
+
+### Suggested Tag Categories
+
+| Category | Examples |
+|----------|----------|
+| **Document Type** | `contract`, `proposal`, `report`, `invoice` |
+| **Status** | `draft`, `final`, `approved`, `pending-review` |
+| **Year/Quarter** | `2024`, `q1-2024` |
+| **Client/Vendor** | `client-acme`, `vendor-xyz` |
+| **Department** | `marketing`, `engineering`, `legal`, `hr` |
+| **Priority** | `urgent`, `high-priority`, `low-priority` |
+| **Confidentiality** | `confidential`, `internal`, `public` |
+
+### Organization Strategy
+
+1. **Define core tags** — Agree on standard tags with your team
+2. **Document conventions** — Write down your tag guidelines
+3. **Review periodically** — Clean up unused or redundant tags
+4. **Be consistent** — Everyone should use the same tags
+
+---
+
+## Tag Governance
+
+### Who Can Create Tags
+
+Typically, anyone who can create documents can create tags.
+
+### Controlling Tag Proliferation
+
+Without governance, you may end up with:
+- Duplicate tags (`contract`, `contracts`, `Contract`)
+- Unused tags
+- Meaningless tags
+
+### Recommendations
+
+- Publish a list of approved tags
+- Review tags periodically
+- Merge duplicate tags when found
+- Train users on tag usage
+
+---
+
+## Common Workflows
+
+### Tagging on Upload
+
+```
+1. Upload document
+       ↓
+2. Think: "What is this document?"
+       ↓
+3. Add type tag: "contract"
+       ↓
+4. Add context tags: "client-acme", "2024"
+       ↓
+5. Add status tag if needed: "pending-review"
+       ↓
+6. Complete upload
+```
+
+### Finding Related Documents
+
+```
+1. Open a document
+       ↓
+2. Note its tags: "client-acme", "contract"
+       ↓
+3. Click "client-acme" tag
+       ↓
+4. See all documents for that client
+       ↓
+5. Refine by adding more filters if needed
+```
+
+### Tag Cleanup
+
+```
+1. Go to Tags page
+       ↓
+2. Sort by usage (lowest first)
+       ↓
+3. Identify unused or low-use tags
+       ↓
+4. Decide: merge, delete, or keep
+       ↓
+5. Update affected documents
+       ↓
+6. Delete unused tags
+```
+
+---
+
+## Troubleshooting
+
+### Tag Not Appearing
+
+**Check:**
+- Save was successful
+- Refresh the page
+- Tag was typed correctly
+
+### Can't Find Documents by Tag
+
+**Try:**
+- Check exact tag spelling
+- Use Tags page instead of search
+- Clear other filters that might conflict
+
+### Duplicate Tags
+
+If you see `contract` and `Contract`:
+1. Decide which to keep
+2. Edit documents with the wrong tag
+3. Apply the correct tag
+4. Remove the wrong tag
+
+### Too Many Tags
+
+If the tag list is overwhelming:
+- Use search/filter on Tags page
+- Focus on most-used tags
+- Consider tag cleanup project
+
+---
+
+## Technical Details
+
+### Tag Storage
+
+Tags are stored as an array on each document:
+```json
+{
+  "document_id": "uuid",
+  "tags": ["contract", "client-acme", "2024"]
+}
+```
+
+### Tag Indexing
+
+Tags are indexed for fast searching using database array indexes.
+
+### API Access
+
+Developers can work with tags via API:
+```
+GET /api/v1/documents?tags=contract,client-acme
+PATCH /api/v1/documents/{id} (with tags in body)
+```
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Document management | [Documents](documents.md) |
+| Search & filtering | [Search](search.md) |
+| Projects | [Projects](projects.md) |

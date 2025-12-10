@@ -1,0 +1,518 @@
+# Documents
+
+Complete guide to document management — creating, organizing, and managing your files.
+
+---
+
+## Document List
+
+### Accessing the Document List
+
+Click **Documents** in the sidebar to see all documents you have access to.
+
+{/* SCREENSHOT: documents-list-full.png
+     Capture the Documents page showing:
+     - Page header with "Documents" title
+     - Upload button
+     - Filter toolbar (search, status, project filters)
+     - Document list (table view preferred)
+     - Pagination at bottom
+     - Browser window: 1400x900
+*/}
+
+### View Modes
+
+Toggle between two display modes:
+
+| Mode | Best For |
+|------|----------|
+| **Table View** | Scanning many documents quickly |
+| **Grid View** | Visual browsing, seeing more details per item |
+
+{/* SCREENSHOT: view-mode-toggle.png
+     Capture the view mode toggle showing:
+     - Table view icon
+     - Grid view icon
+     - Current selection highlighted
+*/}
+
+Click the icons in the toolbar to switch views.
+
+### Table View Columns
+
+| Column | Shows |
+|--------|-------|
+| **Name** | Document name (clickable) |
+| **Status** | Draft, Published, or Archived |
+| **Tags** | Assigned tags |
+| **Modified** | Last update date |
+| **Actions** | Quick action buttons |
+
+### Grid View Cards
+
+Each card displays:
+- Document name
+- Status badge
+- Description preview
+- Last modified date
+- Quick actions
+
+---
+
+## Filtering and Search
+
+### Search
+
+Type in the search box to find documents by name or description.
+
+{/* SCREENSHOT: search-in-action.png
+     Capture the search showing:
+     - Search input with text entered
+     - Filtered results below
+     - Clear indication that filtering is active
+*/}
+
+### Status Filter
+
+Filter by document status:
+
+- **All** — Show everything
+- **Draft** — Work in progress
+- **Published** — Finalized documents
+- **Archived** — Inactive documents
+
+{/* SCREENSHOT: status-filter-dropdown.png
+     Capture the status filter dropdown showing:
+     - Dropdown open with options
+     - Current selection
+*/}
+
+### Project Filter
+
+Show documents from a specific project:
+
+1. Click the Project filter dropdown
+2. Select a project
+3. Only that project's documents appear
+
+### Combining Filters
+
+Filters work together:
+- Search "report" + Status "Published" + Project "Marketing"
+- Shows only published reports from the Marketing project
+
+### Clearing Filters
+
+Click **Clear** or remove individual filters to show all documents again.
+
+---
+
+## Creating Documents
+
+### Upload Process
+
+1. Click the **Upload** button
+2. In the dialog:
+
+{/* SCREENSHOT: upload-dialog-detailed.png
+     Capture the upload dialog showing:
+     - File drop zone with drag-drop instructions
+     - File name display (after file selected)
+     - Name input field
+     - Description textarea
+     - Project dropdown
+     - Tags input
+     - Upload button
+*/}
+
+### Document Fields
+
+| Field | Description | Required |
+|-------|-------------|----------|
+| **File** | The file to upload | Yes |
+| **Name** | Display name for the document | Yes |
+| **Description** | What the document is about | No |
+| **Project** | Which project it belongs to | Recommended |
+| **Tags** | Keywords for organization | No |
+
+### Supported File Types
+
+Document Manager accepts various file types:
+
+| Category | Examples |
+|----------|----------|
+| Documents | PDF, DOC, DOCX, TXT, RTF |
+| Spreadsheets | XLS, XLSX, CSV |
+| Presentations | PPT, PPTX |
+| Images | PNG, JPG, GIF, SVG |
+| Archives | ZIP, RAR |
+
+> **Note:** Your administrator may configure file type restrictions.
+
+### File Size Limits
+
+File size limits are set by your administrator. If you encounter a size error:
+- Compress the file
+- Split into smaller files
+- Contact your administrator
+
+---
+
+## Document Detail Page
+
+Click any document name to open its detail page.
+
+{/* SCREENSHOT: document-detail-full.png
+     Capture the document detail page showing:
+     - Document name at top
+     - Status badge
+     - Action buttons (Download, Edit, Delete)
+     - Tabs: Overview, Versions, Comments
+     - Document information area
+     - Browser window: 1400x800
+*/}
+
+### Page Layout
+
+| Section | Contains |
+|---------|----------|
+| **Header** | Name, status, actions |
+| **Tabs** | Overview, Versions, Comments |
+| **Content Area** | Tab-specific content |
+| **Sidebar** | Metadata and quick info |
+
+### Action Buttons
+
+| Button | Action |
+|--------|--------|
+| **Download** | Get the current file |
+| **Edit** | Modify document metadata |
+| **Delete** | Remove the document |
+
+---
+
+## The Overview Tab
+
+Shows all document information:
+
+{/* SCREENSHOT: overview-tab-content.png
+     Capture the Overview tab showing:
+     - Description section
+     - Document properties
+     - Tags
+     - Project information
+     - Created/Modified dates
+     - Created by / Modified by users
+*/}
+
+### Displayed Information
+
+| Field | Description |
+|-------|-------------|
+| **Description** | Document summary |
+| **Status** | Current state |
+| **Project** | Parent project |
+| **Tags** | Assigned categories |
+| **Created** | When and by whom |
+| **Modified** | Last update info |
+| **File Type** | MIME type and extension |
+
+---
+
+## Editing Documents
+
+### Edit Metadata
+
+1. Click **Edit** on the document page
+2. Modify fields:
+   - Name
+   - Description
+   - Status
+   - Project
+   - Tags
+3. Click **Save**
+
+{/* SCREENSHOT: document-edit-mode-detailed.png
+     Capture document in edit mode showing:
+     - Editable name field
+     - Editable description
+     - Status dropdown
+     - Project dropdown
+     - Tags input
+     - Save/Cancel buttons
+*/}
+
+### Inline Editing
+
+Some fields support inline editing:
+1. Click on the field value
+2. Make your change
+3. Press Enter or click away to save
+
+### Edit vs New Version
+
+- **Edit** — Changes metadata (name, description, tags)
+- **New Version** — Changes the actual file content
+
+Editing metadata does NOT create a new version.
+
+---
+
+## Document Status
+
+### Status Types
+
+| Status | Icon | Meaning |
+|--------|------|---------|
+| **Draft** | Yellow | Work in progress |
+| **Published** | Green | Finalized, ready for use |
+| **Archived** | Gray | Inactive, kept for reference |
+| **Deleted** | Red | Marked for deletion |
+
+### Changing Status
+
+1. Open the document
+2. Click **Edit**
+3. Change the Status dropdown
+4. Save
+
+### Status Workflow
+
+Typical document lifecycle:
+
+```
+       ┌─────────────────────────────────┐
+       │                                 │
+       v                                 │
+    [Draft] ──────> [Published] ──────> [Archived]
+       │                │                 │
+       │                │                 │
+       └────────────────┴─────────────────┘
+                   (can go back)
+```
+
+### Status Best Practices
+
+| When | Status |
+|------|--------|
+| Just uploaded, being worked on | Draft |
+| Complete and approved | Published |
+| Project ended, keep for reference | Archived |
+| No longer needed | Deleted |
+
+---
+
+## Working with Tags
+
+### What Tags Are
+
+Tags are keywords that help categorize and find documents.
+
+### Adding Tags
+
+When creating or editing a document:
+1. Find the Tags field
+2. Type a tag name
+3. Press Enter or comma to add
+4. Repeat for more tags
+
+{/* SCREENSHOT: tags-input.png
+     Capture the tags input showing:
+     - Tags field with several tags added
+     - Each tag as a removable chip/badge
+     - Input area for new tags
+*/}
+
+### Removing Tags
+
+Click the X on any tag to remove it.
+
+### Tag Best Practices
+
+| Good Tags | Why |
+|-----------|-----|
+| `contract` | Clear category |
+| `2024` | Easy year filtering |
+| `client-acme` | Specific client reference |
+| `final` | Status indicator |
+
+| Avoid | Why |
+|-------|-----|
+| `important` | Too vague |
+| `misc` | Not helpful for searching |
+| `document` | Redundant |
+
+---
+
+## Downloading Documents
+
+### Download Current Version
+
+On the document detail page, click **Download**.
+
+### Download Specific Version
+
+1. Go to the **Versions** tab
+2. Find the version you need
+3. Click the download icon for that version
+
+### What Downloads
+
+- The actual file (PDF, DOCX, etc.)
+- Named with the original file name
+- Saved to your browser's download location
+
+---
+
+## Deleting Documents
+
+### How to Delete
+
+1. Open the document detail page
+2. Click **Delete** (or find it in the actions menu)
+3. Confirm the deletion
+
+{/* SCREENSHOT: delete-document-confirm.png
+     Capture the delete confirmation dialog showing:
+     - Warning message
+     - Document name
+     - Confirm and Cancel buttons
+*/}
+
+### Soft Delete
+
+Documents are "soft deleted" meaning:
+- They're hidden from normal views
+- They can be recovered by an administrator
+- Permanent deletion happens after a retention period
+
+### Recovering Deleted Documents
+
+Contact your administrator if you need to recover a deleted document.
+
+---
+
+## Custom Metadata
+
+Documents can store additional custom information.
+
+### What Custom Metadata Is
+
+Extra fields specific to your organization:
+- Client codes
+- Reference numbers
+- Department info
+- Custom properties
+
+### Editing Custom Metadata
+
+If your system uses custom metadata:
+1. Open the document
+2. Click Edit
+3. Find the custom fields section
+4. Update values
+5. Save
+
+> **Note:** Custom metadata fields are configured by your administrator.
+
+---
+
+## Document Permissions
+
+### Who Can See Documents
+
+Access is controlled by:
+- **Project membership** — You see documents in your projects
+- **Role** — Your role affects what actions you can take
+- **Specific permissions** — Admins can set document-level access
+
+### Permission Levels
+
+| Role | Can View | Can Edit | Can Delete |
+|------|----------|----------|------------|
+| Viewer | Yes | No | No |
+| User | Yes | Yes | Own documents |
+| Project Manager | Yes | Yes | Project documents |
+| Admin | Yes | Yes | All documents |
+
+---
+
+## Batch Operations
+
+### Current Support
+
+Most operations are per-document. For multiple documents:
+- Select each document individually
+- Perform the action on each
+
+### Future Features
+
+Bulk operations (select multiple, batch edit/delete) are planned for future releases.
+
+---
+
+## Best Practices
+
+### Naming
+
+Use clear, descriptive names:
+```
+Good: "Q4-2024-Sales-Report-Final.pdf"
+Bad:  "report.pdf"
+```
+
+### Descriptions
+
+Include:
+- What the document contains
+- Its purpose
+- Any important context
+
+### Organization
+
+- Assign to appropriate projects
+- Use consistent tags
+- Update status as work progresses
+
+### Maintenance
+
+- Archive completed work
+- Delete obsolete documents
+- Keep descriptions current
+
+---
+
+## Troubleshooting
+
+### Document Not Appearing
+
+**Check:**
+- Your project membership
+- Filter settings (clear filters)
+- Search for the document name
+
+### Upload Failed
+
+**Try:**
+- Check file size limits
+- Verify file type is allowed
+- Ensure stable internet connection
+- Try a different browser
+
+### Can't Edit Document
+
+**Possible causes:**
+- You don't have edit permission
+- Document is locked
+- You're not a project member
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Version control | [Versions](versions.md) |
+| Comments | [Comments](comments.md) |
+| Searching | [Search](search.md) |
+| Projects | [Projects](projects.md) |

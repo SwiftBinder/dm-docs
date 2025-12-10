@@ -1,0 +1,472 @@
+# Troubleshooting
+
+Common issues and solutions for Document Manager.
+
+---
+
+## Quick Fixes
+
+Before diving into specific issues, try these general solutions:
+
+| Issue | Quick Fix |
+|-------|-----------|
+| Page not loading | Refresh (F5 or Ctrl+R) |
+| Strange behavior | Clear browser cache |
+| Feature not working | Log out and log back in |
+| Slow performance | Close other browser tabs |
+
+---
+
+## Login Issues
+
+### Can't Log In
+
+**Symptoms:**
+- Login button doesn't work
+- "Invalid credentials" error
+- Spinning forever
+
+**Solutions:**
+
+1. **Check credentials**
+   - Verify email/username spelling
+   - Check for caps lock
+   - Try copying password from a password manager
+
+2. **Clear browser data**
+   - Clear cookies for this site
+   - Clear cached data
+   - Try incognito/private window
+
+3. **Check account status**
+   - Contact admin — account may be deactivated
+   - You may be using the wrong URL
+
+4. **Browser issues**
+   - Try a different browser
+   - Disable browser extensions
+   - Check JavaScript is enabled
+
+### Session Expired
+
+**Symptoms:**
+- Suddenly redirected to login
+- "Session expired" message
+- Actions failing with 401 error
+
+**Solutions:**
+
+1. Simply log in again
+2. Check your browser isn't blocking cookies
+3. If frequent, contact admin about session settings
+
+### Account Locked
+
+**Symptoms:**
+- "Account locked" or "Too many attempts" message
+- Can't try again immediately
+
+**Solutions:**
+
+1. Wait 15-30 minutes and try again
+2. Contact administrator for immediate unlock
+3. Verify you're using the correct credentials
+
+---
+
+## Document Issues
+
+### Can't Find a Document
+
+**Symptoms:**
+- Document not in list
+- Search returns nothing
+- Know it exists but can't see it
+
+**Solutions:**
+
+1. **Check filters**
+   - Clear all filters
+   - Set status to "All"
+   - Remove project filter
+
+2. **Check access**
+   - Verify you're a member of the project
+   - Ask if document was moved or renamed
+
+3. **Check deletion**
+   - Document may have been deleted
+   - Contact admin for recovery
+
+### Can't Upload Document
+
+**Symptoms:**
+- Upload fails
+- Error message on upload
+- Progress bar stops
+
+**Solutions:**
+
+1. **Check file**
+   - Verify file isn't too large (check limits with admin)
+   - Ensure file type is allowed
+   - Try a smaller file
+
+2. **Check connection**
+   - Verify stable internet
+   - Try uploading again
+
+3. **Check permissions**
+   - Verify you have User role or higher
+   - Verify you're a project member
+
+### Document Won't Open
+
+**Symptoms:**
+- Clicking does nothing
+- Error when opening
+- Blank page
+
+**Solutions:**
+
+1. Refresh the page
+2. Clear browser cache
+3. Try a different browser
+4. Check if document was deleted
+
+### Can't Edit Document
+
+**Symptoms:**
+- Edit button missing or grayed out
+- Changes won't save
+- "Permission denied"
+
+**Solutions:**
+
+1. **Check permissions**
+   - Verify you have edit access
+   - Check your role (Viewer can't edit)
+   - Verify project membership
+
+2. **Check document status**
+   - Document may be locked by another user
+   - Document may be archived
+
+3. **Try refreshing**
+   - Reload the page
+   - Log out and back in
+
+---
+
+## Version Issues
+
+### Can't Upload New Version
+
+**Symptoms:**
+- Upload version fails
+- Button not visible
+- Error on upload
+
+**Solutions:**
+
+1. Check file size and type
+2. Verify document isn't locked
+3. Verify you have edit permissions
+4. Try a different browser
+
+### Version History Empty
+
+**Symptoms:**
+- Only one version shows
+- Versions tab is empty
+
+**Solutions:**
+
+1. Document may only have one version (v1)
+2. Refresh the page
+3. Check if viewing correct document
+
+### Rollback Failed
+
+**Symptoms:**
+- Rollback button doesn't work
+- Error on rollback attempt
+
+**Solutions:**
+
+1. Verify you have edit permissions
+2. Check if document is locked
+3. Try refreshing and attempting again
+4. Contact admin if persists
+
+---
+
+## Comment Issues
+
+### Can't Add Comments
+
+**Symptoms:**
+- Comment box not visible
+- Submit button doesn't work
+- "Permission denied"
+
+**Solutions:**
+
+1. Verify you have User role or higher (Viewer can't comment)
+2. Check project membership
+3. Refresh the page
+
+### Comments Not Appearing
+
+**Symptoms:**
+- Posted comment not visible
+- Comments disappeared
+
+**Solutions:**
+
+1. Check "Show resolved" filter
+2. Refresh the page
+3. Comments may be loading slowly
+
+---
+
+## Project Issues
+
+### Can't See Project
+
+**Symptoms:**
+- Project not in list
+- "Not found" when accessing
+
+**Solutions:**
+
+1. Verify you're a project member
+2. Check if project was archived or deleted
+3. Contact project owner or admin
+
+### Can't Create Project
+
+**Symptoms:**
+- Create button missing
+- "Permission denied"
+
+**Solutions:**
+
+1. Verify you have Project Manager or Admin role
+2. Contact admin for role upgrade
+
+### Can't Add Team to Project
+
+**Symptoms:**
+- Assign Team doesn't work
+- Teams not available
+
+**Solutions:**
+
+1. Verify you're project Admin or Owner
+2. Check if team exists
+3. Verify team isn't already assigned
+
+---
+
+## Performance Issues
+
+### Slow Loading
+
+**Symptoms:**
+- Pages take long to load
+- Actions are sluggish
+- Timeouts
+
+**Solutions:**
+
+1. **Check your connection**
+   - Test internet speed
+   - Try wired connection
+
+2. **Check browser**
+   - Close unnecessary tabs
+   - Disable heavy extensions
+   - Clear cache
+
+3. **Check system**
+   - Restart browser
+   - Check for system updates
+
+### App Freezes
+
+**Symptoms:**
+- Can't click anything
+- Spinning cursor
+- Unresponsive
+
+**Solutions:**
+
+1. Wait a moment — may be processing
+2. Refresh the page
+3. Close and reopen browser
+4. Clear browser cache
+
+---
+
+## Display Issues
+
+### Layout Broken
+
+**Symptoms:**
+- Elements overlapping
+- Missing components
+- Strange appearance
+
+**Solutions:**
+
+1. Refresh the page
+2. Try zoom reset (Ctrl+0)
+3. Clear browser cache
+4. Try different browser
+
+### Theme Issues
+
+**Symptoms:**
+- Theme not applying
+- Stuck on wrong theme
+- Flickering
+
+**Solutions:**
+
+1. Go to Settings → Appearance
+2. Select your theme explicitly
+3. Refresh the page
+
+### Mobile Display Problems
+
+**Symptoms:**
+- Elements cut off
+- Can't access features
+- Layout issues
+
+**Solutions:**
+
+1. Try landscape orientation
+2. Use desktop version if available
+3. Report to admin — mobile support may be limited
+
+---
+
+## Browser Compatibility
+
+### Supported Browsers
+
+| Browser | Minimum Version |
+|---------|-----------------|
+| Chrome | 90+ |
+| Firefox | 90+ |
+| Safari | 14+ |
+| Edge | 90+ |
+
+### Known Browser Issues
+
+| Browser | Known Issue | Workaround |
+|---------|-------------|------------|
+| Internet Explorer | Not supported | Use Edge instead |
+| Old Safari | Some features may not work | Update macOS |
+
+---
+
+## Error Messages
+
+### Common Error Codes
+
+| Error | Meaning | Solution |
+|-------|---------|----------|
+| **401 Unauthorized** | Session expired | Log in again |
+| **403 Forbidden** | No permission | Check access rights |
+| **404 Not Found** | Resource doesn't exist | Check URL, item may be deleted |
+| **500 Server Error** | System error | Wait and retry, contact admin |
+| **503 Service Unavailable** | System maintenance | Wait and retry |
+
+### What to Report
+
+When contacting support, include:
+
+1. What you were trying to do
+2. The error message (exact text)
+3. Steps to reproduce
+4. Browser and version
+5. Screenshots if possible
+
+---
+
+## Getting Help
+
+### Self-Service Options
+
+1. **This documentation** — Search for your issue
+2. **Keyboard shortcuts** — Press `?` for help
+3. **Command palette** — `Ctrl+K` for quick navigation
+
+### Contact Administrator
+
+For issues requiring admin help:
+- Account problems
+- Permission requests
+- System issues
+- Data recovery
+
+### Information to Provide
+
+When reporting issues:
+
+```
+1. Issue description:
+   [What's happening]
+
+2. Expected behavior:
+   [What should happen]
+
+3. Steps to reproduce:
+   1. [Step one]
+   2. [Step two]
+   3. [Step three]
+
+4. Environment:
+   - Browser: [e.g., Chrome 120]
+   - OS: [e.g., Windows 11]
+   - Time: [when issue occurred]
+
+5. Screenshots:
+   [Attach if possible]
+```
+
+---
+
+## Preventive Measures
+
+### Best Practices
+
+1. **Keep browser updated**
+2. **Clear cache periodically**
+3. **Use supported browsers**
+4. **Log out when done on shared computers**
+5. **Save work frequently**
+
+### Warning Signs
+
+Watch for these signs of potential issues:
+
+| Sign | Possible Problem |
+|------|------------------|
+| Slow loading | Network or cache issue |
+| Frequent logouts | Session configuration |
+| Missing features | Permission changes |
+| Error messages | System issues |
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Authentication | [Authentication](../guide/authentication.md) |
+| Settings | [Settings](../guide/settings.md) |
+| Admin contact | [Admin Overview](../admin/overview.md) |

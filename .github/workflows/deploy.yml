@@ -20,15 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Checkout dm-ui for docs
-        uses: actions/checkout@v4
-        with:
-          repository: SwiftBinder/dm-ui
-          path: dm-ui-temp
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -38,15 +29,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Copy documentation files
-        run: |
-          mkdir -p ../dm-ui/docs/user
-          cp -r dm-ui-temp/docs/user/* ../dm-ui/docs/user/
-          rm -rf dm-ui-temp
-
-      - name: Convert markdown to MDX
-        run: ./convert-docs.sh
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

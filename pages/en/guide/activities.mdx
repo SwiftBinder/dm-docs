@@ -1,0 +1,369 @@
+# Activities
+
+Complete guide to activity tracking — monitoring changes, audit trails, and system events.
+
+---
+
+## Overview
+
+The Activities feature tracks everything that happens in Document Manager, providing a comprehensive audit trail of all actions.
+
+{/* SCREENSHOT: activities-page.png
+     Capture the Activities page showing:
+     - Activity timeline/list
+     - Filter options
+     - Activity items with icons
+     - Timestamps and user info
+     - Browser window: 1400x800
+*/}
+
+---
+
+## Understanding Activities
+
+### What Gets Tracked
+
+| Category | Events |
+|----------|--------|
+| **Documents** | Created, updated, deleted, downloaded |
+| **Versions** | Uploaded, rolled back, downloaded |
+| **Comments** | Added, edited, resolved, deleted |
+| **Projects** | Created, updated, archived, deleted |
+| **Users** | Logged in, profile updated |
+| **Teams** | Created, members added/removed |
+
+### Why Activity Tracking Matters
+
+- **Audit compliance** — Know who did what and when
+- **Collaboration awareness** — See team activity
+- **Troubleshooting** — Understand what changed
+- **Security** — Detect unusual activity
+
+---
+
+## Viewing Activities
+
+### Accessing the Activities Page
+
+Click **Activities** in the sidebar (if available), or find it under your user menu.
+
+### Activity Feed Layout
+
+{/* SCREENSHOT: activity-feed-items.png
+     Capture several activity items showing:
+     - Activity icons by type
+     - User names
+     - Action descriptions
+     - Resource names (document, project)
+     - Timestamps
+*/}
+
+Each activity shows:
+- **Icon** — Visual indicator of activity type
+- **User** — Who performed the action
+- **Action** — What was done
+- **Resource** — What was affected
+- **Time** — When it happened
+
+### Activity Item Example
+
+```
+📄 John Smith uploaded a new version to "Q4 Report"
+   2 hours ago
+```
+
+---
+
+## Activity Types
+
+### Document Activities
+
+| Event | Description | Icon |
+|-------|-------------|------|
+| Document created | New document uploaded | 📄+ |
+| Document updated | Metadata changed | 📝 |
+| Document deleted | Document removed | 🗑️ |
+| Document downloaded | File downloaded | ⬇️ |
+
+### Version Activities
+
+| Event | Description | Icon |
+|-------|-------------|------|
+| Version created | New version uploaded | 📤 |
+| Version rollback | Reverted to earlier version | ↩️ |
+| Version downloaded | Specific version downloaded | ⬇️ |
+
+### Comment Activities
+
+| Event | Description | Icon |
+|-------|-------------|------|
+| Comment added | New comment posted | 💬+ |
+| Comment resolved | Discussion completed | ✓ |
+| Comment deleted | Comment removed | 💬- |
+
+### Project Activities
+
+| Event | Description | Icon |
+|-------|-------------|------|
+| Project created | New project started | 📁+ |
+| Project updated | Settings changed | 📁 |
+| Project completed | Marked as done | ✅ |
+| Project archived | Moved to archive | 📦 |
+
+### User Activities
+
+| Event | Description | Icon |
+|-------|-------------|------|
+| User login | Successful authentication | 🔐 |
+| Profile updated | User settings changed | 👤 |
+| Password changed | Security update | 🔑 |
+
+---
+
+## Filtering Activities
+
+### Filter Options
+
+{/* SCREENSHOT: activity-filters.png
+     Capture the filter area showing:
+     - Resource type filter
+     - Date range (if available)
+     - User filter (if available)
+*/}
+
+| Filter | Shows |
+|--------|-------|
+| **All** | Everything |
+| **Documents** | Document-related events |
+| **Projects** | Project changes |
+| **Comments** | Comment activity |
+| **Users** | User actions |
+| **Versions** | Version uploads, rollbacks |
+
+### Using Filters
+
+1. Find the filter dropdown or buttons
+2. Select the resource type
+3. Activity list updates
+
+### Combining Filters
+
+If multiple filters are available:
+- Select date range
+- Choose resource type
+- Pick specific user
+- Results combine all criteria
+
+---
+
+## Activity Pagination
+
+### Navigating Long History
+
+Activities are paginated for performance:
+- Recent activities load first
+- Scroll or page through history
+- Load more to see older events
+
+### Limits
+
+| Setting | Typical Value |
+|---------|---------------|
+| Items per page | 50 |
+| Max history | Varies by config |
+| Retention | Check with admin |
+
+---
+
+## My Activities
+
+### Viewing Your Own Actions
+
+Your personal activity history:
+
+1. May be available under your profile
+2. Shows only your actions
+3. Useful for tracking your work
+
+{/* SCREENSHOT: my-activities.png
+     Capture the personal activities view showing:
+     - User's own actions
+     - Recent activity list
+*/}
+
+---
+
+## Dashboard Activity Widget
+
+### Recent Activity on Dashboard
+
+The Dashboard includes a Recent Activity section:
+
+{/* SCREENSHOT: dashboard-activity-widget.png
+     Capture the Dashboard's Recent Activity section showing:
+     - Recent activity items
+     - Condensed view
+     - "See all" link if available
+*/}
+
+This shows:
+- Latest system activity
+- Quick glance at what's happening
+- Link to full Activities page
+
+---
+
+## Activity Details
+
+### Viewing More Information
+
+Click on an activity item to see details:
+
+| Detail | Description |
+|--------|-------------|
+| **Full timestamp** | Exact date and time |
+| **User info** | Who performed the action |
+| **Resource link** | Link to affected item |
+| **Additional data** | Specifics of the change |
+
+### Navigating to Resources
+
+From an activity item:
+- Click the resource name to open it
+- Jump directly to the document, project, etc.
+
+---
+
+## Notifications vs Activities
+
+### How They Differ
+
+| Aspect | Notifications | Activities |
+|--------|---------------|------------|
+| **Purpose** | Alert you to important events | Complete record |
+| **Scope** | Events relevant to you | All system events |
+| **Read status** | Can mark as read | No read status |
+| **Persistence** | May be cleared | Permanent record |
+
+### When to Use Each
+
+- **Notifications** — What needs your attention now
+- **Activities** — Historical record of what happened
+
+---
+
+## Audit Trail Use Cases
+
+### Security Auditing
+
+Check for unusual activity:
+- Login patterns
+- Mass downloads
+- Unauthorized access attempts
+
+### Compliance
+
+Demonstrate controls:
+- Document access history
+- Change tracking
+- User action accountability
+
+### Troubleshooting
+
+Understand what changed:
+- When a document was modified
+- Who made changes
+- What the previous state was
+
+### Project Management
+
+Track progress:
+- Team activity levels
+- Document completion
+- Comment resolution
+
+---
+
+## Activity Best Practices
+
+### For Users
+
+1. **Check activity regularly** — Stay informed
+2. **Use filters** — Focus on what matters
+3. **Review before changes** — See what's happened
+
+### For Administrators
+
+1. **Monitor for anomalies** — Unusual patterns
+2. **Export for audits** — Compliance reporting
+3. **Set retention policies** — Balance storage vs history
+
+---
+
+## Troubleshooting
+
+### Activities Not Loading
+
+**Try:**
+- Refresh the page
+- Clear filters
+- Check internet connection
+
+### Missing Activities
+
+**Check:**
+- Date filter range
+- Resource type filter
+- User permissions
+
+### Activity Details Unavailable
+
+**Possible causes:**
+- Resource was deleted
+- Insufficient permissions
+- Data retention expired
+
+---
+
+## Technical Details
+
+### What Gets Logged
+
+Each activity records:
+
+| Field | Description |
+|-------|-------------|
+| Event type | Type of action |
+| Resource type | Document, project, etc. |
+| Resource ID | Specific item affected |
+| User ID | Who performed action |
+| Timestamp | When it happened |
+| IP address | Client location |
+| Event data | Additional details |
+
+### API Access
+
+Developers can access activities:
+
+```
+GET /api/v1/activities/recent
+GET /api/v1/activities/me
+GET /api/v1/activities/{id}
+```
+
+### Activity Retention
+
+Check with your administrator for:
+- How long activities are kept
+- Archival policies
+- Export capabilities
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Dashboard | [Dashboard](dashboard.md) |
+| System monitoring | [System Monitoring](../admin/system-monitoring.md) |
+| User management | [User Management](../admin/user-management.md) |

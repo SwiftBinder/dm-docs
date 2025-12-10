@@ -1,0 +1,462 @@
+# Projects
+
+Complete guide to project management — creating, organizing, and managing project workspaces.
+
+---
+
+## Overview
+
+Projects are the primary way to organize documents and control access in Document Manager. Each project is a container that groups related documents and defines who can work with them.
+
+{/* SCREENSHOT: projects-page-full.png
+     Capture the Projects page showing:
+     - Grid of project cards
+     - Various project statuses visible
+     - Create Project button
+     - Status filter if available
+     - Browser window: 1400x900
+*/}
+
+---
+
+## Understanding Projects
+
+### What Projects Provide
+
+| Feature | Benefit |
+|---------|---------|
+| **Organization** | Group related documents together |
+| **Access Control** | Control who sees what |
+| **Team Assignment** | Assign teams to projects |
+| **Status Tracking** | Track project lifecycle |
+| **Isolation** | Keep work separated |
+
+### Project Structure
+
+```
+Project
+├── Members (who can access)
+├── Teams (groups with access)
+├── Documents
+│   ├── Document 1 (with versions, comments)
+│   ├── Document 2
+│   └── ...
+└── Settings (status, dates, description)
+```
+
+---
+
+## Viewing Projects
+
+### Projects List
+
+Click **Projects** in the sidebar to see all projects you're a member of.
+
+{/* SCREENSHOT: projects-grid.png
+     Capture the projects grid showing:
+     - Project cards with names
+     - Status badges
+     - Brief descriptions
+     - Visual project representation
+*/}
+
+### Project Card Information
+
+Each card shows:
+- **Name** — Project title
+- **Description** — Brief summary
+- **Status** — Current state (Active, Completed, etc.)
+- **Member Count** — Team size (if shown)
+
+### Filtering Projects
+
+Filter by status:
+- **All** — Show all projects
+- **Active** — Currently in progress
+- **Completed** — Finished projects
+- **Archived** — Inactive projects
+
+---
+
+## Project Details
+
+### Opening a Project
+
+Click any project card to view details.
+
+{/* SCREENSHOT: project-detail-page.png
+     Capture the project detail page showing:
+     - Project name and description
+     - Status badge
+     - Start/End dates
+     - Team members section
+     - Documents section
+     - Action buttons
+*/}
+
+### Detail Page Sections
+
+| Section | Shows |
+|---------|-------|
+| **Overview** | Name, description, status |
+| **Documents** | All documents in this project |
+| **Members** | People with access |
+| **Teams** | Teams assigned to project |
+| **Settings** | Project configuration |
+
+---
+
+## Project Status
+
+### Status Types
+
+| Status | Meaning | Typical Use |
+|--------|---------|-------------|
+| **Active** | Work in progress | Current projects |
+| **On Hold** | Temporarily paused | Delayed projects |
+| **Completed** | Successfully finished | Done projects |
+| **Archived** | No longer active | Historical reference |
+
+### Status Workflow
+
+```
+┌──────────────────────────────────────────────┐
+│                                              │
+v                                              │
+[Active] ←──→ [On Hold]                        │
+    │                                          │
+    v                                          │
+[Completed] ─────────────────────> [Archived]  │
+    │                                          │
+    └──────────────────────────────────────────┘
+         (can reactivate if needed)
+```
+
+### Changing Status
+
+If you have permission:
+
+1. Open the project
+2. Click **Edit** or find status option
+3. Select new status
+4. Save
+
+---
+
+## Creating Projects
+
+### Who Can Create
+
+- **Project Manager** role
+- **Admin** role
+
+### Creation Process
+
+1. Go to **Projects**
+2. Click **Create Project**
+
+{/* SCREENSHOT: create-project-form.png
+     Capture the Create Project dialog showing:
+     - Name field
+     - Description field
+     - Status dropdown
+     - Start Date field
+     - End Date field
+     - Create button
+*/}
+
+3. Fill in the details:
+
+| Field | Description | Required |
+|-------|-------------|----------|
+| **Name** | Clear project title | Yes |
+| **Description** | What the project is about | Recommended |
+| **Status** | Initial status (usually Active) | Yes |
+| **Start Date** | When work begins | Optional |
+| **End Date** | Target completion | Optional |
+
+4. Click **Create**
+
+### Naming Best Practices
+
+| Good Names | Bad Names |
+|------------|-----------|
+| "2024 Marketing Campaign" | "Project 1" |
+| "Client ABC - Website Redesign" | "New project" |
+| "Q4 Sales Documentation" | "Stuff" |
+
+---
+
+## Managing Project Members
+
+### Member Roles
+
+| Role | Permissions |
+|------|-------------|
+| **Member** | View and work with documents |
+| **Admin** | Manage project settings |
+| **Owner** | Full control, can delete project |
+
+### Adding Members
+
+1. Open the project
+2. Go to **Members** section
+3. Click **Add Member**
+
+{/* SCREENSHOT: add-member-dialog.png
+     Capture the Add Member dialog showing:
+     - User search/select
+     - Role dropdown
+     - Add button
+*/}
+
+4. Search for the user
+5. Select their role
+6. Click **Add**
+
+### Removing Members
+
+1. Find the member in the list
+2. Click **Remove** (or the X icon)
+3. Confirm removal
+
+### Changing Member Roles
+
+1. Find the member
+2. Click their current role
+3. Select new role
+
+---
+
+## Assigning Teams
+
+### Why Use Teams
+
+Instead of adding members one by one:
+- Add a team (e.g., "Marketing Team")
+- All team members get project access
+- When team membership changes, project access updates automatically
+
+### Adding a Team
+
+1. Open the project
+2. Go to **Teams** section
+3. Click **Assign Team**
+
+{/* SCREENSHOT: assign-team-dialog.png
+     Capture the Assign Team dialog showing:
+     - Team selection dropdown
+     - Permission level selection
+     - Assign button
+*/}
+
+4. Select the team
+5. Choose permission level
+6. Click **Assign**
+
+### Team Permission Levels
+
+| Level | Access |
+|-------|--------|
+| **View** | Read-only access |
+| **Edit** | Can modify documents |
+| **Manage** | Can add/remove members |
+
+### Removing Teams
+
+1. Find the team in the list
+2. Click **Remove**
+3. Confirm
+
+---
+
+## Project Documents
+
+### Viewing Project Documents
+
+On the project detail page, the Documents section shows all documents in this project.
+
+### Filtering by Project
+
+From the main Documents page:
+
+1. Use the **Project** filter
+2. Select a project
+3. See only that project's documents
+
+{/* SCREENSHOT: filter-documents-by-project.png
+     Capture the Documents page showing:
+     - Project filter dropdown open
+     - Project options visible
+*/}
+
+### Adding Documents to a Project
+
+When uploading a document:
+1. Select the project in the upload dialog
+2. The document is automatically associated
+
+Or move an existing document:
+1. Edit the document
+2. Change the Project field
+3. Save
+
+---
+
+## Project Settings
+
+### Editing Project Information
+
+1. Open the project
+2. Click **Edit** or **Settings**
+3. Modify:
+   - Name
+   - Description
+   - Status
+   - Dates
+4. Save changes
+
+### Project Lifecycle Management
+
+#### Complete a Project
+
+When finished:
+1. Open the project
+2. Change status to **Completed**
+3. Or use **Complete** button if available
+
+{/* SCREENSHOT: complete-project-action.png
+     Capture the project with Complete action showing:
+     - Complete button or menu option
+*/}
+
+#### Archive a Project
+
+For long-term storage:
+1. Change status to **Archived**
+2. Documents remain accessible but project is inactive
+
+#### Reactivate a Project
+
+To resume work:
+1. Change status back to **Active**
+2. Project returns to normal operation
+
+---
+
+## Deleting Projects
+
+### Deletion Process
+
+1. Open the project
+2. Click **Delete**
+3. Confirm deletion
+
+{/* SCREENSHOT: delete-project-confirm.png
+     Capture the delete confirmation showing:
+     - Warning message
+     - Impact explanation
+     - Confirm/Cancel buttons
+*/}
+
+### What Happens
+
+- Project is soft-deleted
+- Documents may be affected (check your org's policy)
+- Recovery possible by administrator
+
+> **Warning:** Consider archiving instead of deleting to preserve history.
+
+---
+
+## Project Best Practices
+
+### Planning
+
+- **Define scope clearly** — One initiative per project
+- **Set realistic dates** — Use start/end dates for planning
+- **Write good descriptions** — Help team understand the purpose
+
+### Organization
+
+- **Consistent naming** — Follow a naming convention
+- **Appropriate status** — Update status as work progresses
+- **Regular cleanup** — Archive completed projects
+
+### Access Control
+
+- **Minimal access** — Only add members who need access
+- **Use teams** — Easier management than individual members
+- **Review periodically** — Remove people who no longer need access
+
+### Lifecycle
+
+```
+1. Create project (Active)
+       ↓
+2. Add members/teams
+       ↓
+3. Upload documents, collaborate
+       ↓
+4. Work progresses...
+       ↓
+5. Complete project (Completed)
+       ↓
+6. After retention period (Archived)
+```
+
+---
+
+## Permissions Summary
+
+### What Each Role Can Do
+
+| Action | Member | Admin | Owner |
+|--------|--------|-------|-------|
+| View project | ✓ | ✓ | ✓ |
+| View documents | ✓ | ✓ | ✓ |
+| Create documents | ✓ | ✓ | ✓ |
+| Edit documents | ✓ | ✓ | ✓ |
+| Change project settings | | ✓ | ✓ |
+| Add/remove members | | ✓ | ✓ |
+| Assign teams | | ✓ | ✓ |
+| Delete project | | | ✓ |
+
+---
+
+## Troubleshooting
+
+### Can't See a Project
+
+**Check:**
+- You're a member of the project
+- The project isn't deleted
+- Filter settings aren't hiding it
+
+### Can't Create Project
+
+**Possible causes:**
+- You need Project Manager or Admin role
+- Contact your administrator
+
+### Can't Add Members
+
+**Check:**
+- Your project role (need Admin or Owner)
+- The user exists and is active
+
+### Documents Missing After Moving Project
+
+**Documents stay with their project.** If you:
+- Left a project → You lose document access
+- Documents moved to another project → Check that project
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Team management | [Teams](teams.md) |
+| Document management | [Documents](documents.md) |
+| Roles and permissions | [Roles & Permissions](../reference/roles-permissions.md) |

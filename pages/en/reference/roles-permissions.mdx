@@ -1,0 +1,360 @@
+# Roles & Permissions
+
+Complete reference for user roles and permission levels in Document Manager.
+
+---
+
+## Overview
+
+Document Manager uses Role-Based Access Control (RBAC) to manage what users can do. Each user is assigned one role that determines their permissions throughout the system.
+
+---
+
+## User Roles
+
+### Role Hierarchy
+
+```
+Admin
+  ↓
+Project Manager
+  ↓
+User
+  ↓
+Viewer
+```
+
+Higher roles include all permissions of lower roles.
+
+### Role Descriptions
+
+| Role | Description | Typical Assignment |
+|------|-------------|--------------------|
+| **Viewer** | Read-only access | External stakeholders, read-only users |
+| **User** | Standard document operations | Regular employees |
+| **Project Manager** | Team and project leadership | Department heads, team leads |
+| **Admin** | Full system access | IT administrators |
+
+---
+
+## Detailed Permission Matrix
+
+### Document Permissions
+
+| Action | Viewer | User | Project Mgr | Admin |
+|--------|:------:|:----:|:-----------:|:-----:|
+| View documents | ✓ | ✓ | ✓ | ✓ |
+| Download documents | ✓ | ✓ | ✓ | ✓ |
+| Create documents | | ✓ | ✓ | ✓ |
+| Edit document metadata | | ✓ | ✓ | ✓ |
+| Upload new versions | | ✓ | ✓ | ✓ |
+| Delete own documents | | ✓ | ✓ | ✓ |
+| Delete any document | | | | ✓ |
+| Change document status | | ✓ | ✓ | ✓ |
+
+### Version Permissions
+
+| Action | Viewer | User | Project Mgr | Admin |
+|--------|:------:|:----:|:-----------:|:-----:|
+| View version history | ✓ | ✓ | ✓ | ✓ |
+| Download versions | ✓ | ✓ | ✓ | ✓ |
+| Upload new versions | | ✓ | ✓ | ✓ |
+| Rollback versions | | ✓ | ✓ | ✓ |
+
+### Comment Permissions
+
+| Action | Viewer | User | Project Mgr | Admin |
+|--------|:------:|:----:|:-----------:|:-----:|
+| View comments | ✓ | ✓ | ✓ | ✓ |
+| Add comments | | ✓ | ✓ | ✓ |
+| Edit own comments | | ✓ | ✓ | ✓ |
+| Delete own comments | | ✓ | ✓ | ✓ |
+| Resolve comments | | ✓ | ✓ | ✓ |
+| Edit any comment | | | | ✓ |
+| Delete any comment | | | | ✓ |
+
+### Project Permissions
+
+| Action | Viewer | User | Project Mgr | Admin |
+|--------|:------:|:----:|:-----------:|:-----:|
+| View projects | ✓ | ✓ | ✓ | ✓ |
+| Create projects | | | ✓ | ✓ |
+| Edit project settings | | | ✓* | ✓ |
+| Delete projects | | | ✓* | ✓ |
+| Add project members | | | ✓* | ✓ |
+| Remove project members | | | ✓* | ✓ |
+| Assign teams | | | ✓* | ✓ |
+
+*For projects where they are Owner or Admin
+
+### Team Permissions
+
+| Action | Viewer | User | Project Mgr | Admin |
+|--------|:------:|:----:|:-----------:|:-----:|
+| View teams | ✓ | ✓ | ✓ | ✓ |
+| Create teams | | ✓ | ✓ | ✓ |
+| Manage own teams | | ✓** | ✓** | ✓ |
+| Manage any team | | | | ✓ |
+
+**For teams where they are Lead
+
+### User Management Permissions
+
+| Action | Viewer | User | Project Mgr | Admin |
+|--------|:------:|:----:|:-----------:|:-----:|
+| View user list | | | | ✓ |
+| Create users | | | | ✓ |
+| Edit users | | | | ✓ |
+| Deactivate users | | | | ✓ |
+| Change user roles | | | | ✓ |
+| Reset passwords | | | | ✓ |
+
+### System Permissions
+
+| Action | Viewer | User | Project Mgr | Admin |
+|--------|:------:|:----:|:-----------:|:-----:|
+| View own activity | ✓ | ✓ | ✓ | ✓ |
+| View all activities | | | | ✓ |
+| Access admin settings | | | | ✓ |
+| View system health | | | | ✓ |
+
+---
+
+## Role Details
+
+### Viewer
+
+The most restricted role, intended for users who only need to view content.
+
+**Can:**
+- Browse accessible documents
+- Download documents and versions
+- Read comments
+- View project and team information
+
+**Cannot:**
+- Create or modify documents
+- Upload versions
+- Add comments
+- Manage projects or teams
+
+**Use For:**
+- External stakeholders
+- Auditors
+- Read-only stakeholders
+- Guest access
+
+### User
+
+The standard role for regular employees who work with documents.
+
+**Can:**
+- Everything a Viewer can do
+- Create and edit documents
+- Upload new versions
+- Add and manage comments
+- Create teams
+- Manage own content
+
+**Cannot:**
+- Create projects
+- Manage other users
+- Access admin functions
+
+**Use For:**
+- Regular employees
+- Document contributors
+- Team members
+
+### Project Manager
+
+Enhanced role for users who lead projects and teams.
+
+**Can:**
+- Everything a User can do
+- Create projects
+- Manage projects they own
+- Assign teams to projects
+- Manage project membership
+- Oversee team activities
+
+**Cannot:**
+- Manage users
+- Access system-wide admin functions
+- Manage projects they don't own (unless Admin)
+
+**Use For:**
+- Team leads
+- Department heads
+- Project owners
+- Senior contributors
+
+### Admin
+
+Full system access for administrators.
+
+**Can:**
+- Everything all other roles can do
+- Manage all users
+- Access all projects and documents
+- View all activity logs
+- Configure system settings
+- Delete any content
+
+**Use For:**
+- IT administrators
+- System managers
+- Security officers
+
+---
+
+## Project-Level Roles
+
+Within projects, users can have additional roles:
+
+| Project Role | Description |
+|--------------|-------------|
+| **Member** | Standard project access |
+| **Admin** | Can manage project settings |
+| **Owner** | Full project control |
+
+These roles affect project-specific actions and work alongside the system role.
+
+---
+
+## Team Roles
+
+Within teams, members can have roles:
+
+| Team Role | Description |
+|-----------|-------------|
+| **Viewer** | See team info |
+| **Member** | Full team participation |
+| **Lead** | Manage team members and settings |
+
+---
+
+## Permission Scope
+
+### System Role vs Project Role
+
+| Scope | Determined By |
+|-------|---------------|
+| What pages you can access | System role |
+| What actions you can take system-wide | System role |
+| What you can do in a specific project | System role + Project role |
+| What projects you can see | Project membership |
+
+### Example Scenario
+
+**User: Jane (Role: User)**
+- Project A: Member
+- Project B: Admin
+- Project C: Not a member
+
+| Action | Project A | Project B | Project C |
+|--------|:---------:|:---------:|:---------:|
+| View documents | ✓ | ✓ | ✗ |
+| Create documents | ✓ | ✓ | ✗ |
+| Add members | ✗ | ✓ | ✗ |
+| Delete project | ✗ | ✗ | ✗ |
+
+Jane can manage Project B because she's the project admin, even though her system role is just "User".
+
+---
+
+## Changing Roles
+
+### Who Can Change Roles
+
+Only Administrators can change user roles.
+
+### Role Change Process
+
+1. Admin navigates to Users
+2. Finds the user
+3. Edits their profile
+4. Selects new role
+5. Saves changes
+
+### Role Change Effects
+
+- Takes effect immediately
+- User may need to refresh or re-login
+- Does not affect project memberships
+- Logged in activity history
+
+---
+
+## Best Practices
+
+### Assigning Roles
+
+| Principle | Explanation |
+|-----------|-------------|
+| **Least privilege** | Give minimum role needed |
+| **Job function** | Match role to responsibilities |
+| **Review regularly** | Audit role assignments |
+| **Document decisions** | Record why roles were assigned |
+
+### Common Patterns
+
+| Scenario | Recommended Role |
+|----------|------------------|
+| New employee | User |
+| Contractor (read-only) | Viewer |
+| Team lead | Project Manager |
+| IT staff | Admin |
+| External auditor | Viewer |
+| Department head | Project Manager |
+
+### Role Escalation Requests
+
+When users request higher roles:
+1. Verify business justification
+2. Consider if project role is sufficient
+3. Apply least privilege principle
+4. Document the decision
+5. Set review date
+
+---
+
+## Troubleshooting
+
+### "Permission Denied" Errors
+
+**Check:**
+1. User's system role
+2. Project membership
+3. Project role within that project
+4. Specific action being attempted
+
+### User Can't See Project
+
+**Possible causes:**
+- Not a project member
+- Not on an assigned team
+- Project is archived/deleted
+
+### User Can't Create Projects
+
+**Check:**
+- Role is Project Manager or Admin
+- Or request role upgrade
+
+### Admin Functions Not Visible
+
+**Verify:**
+- User has Admin role
+- Not just Project Manager
+- Account is active
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| User management | [User Management](../admin/user-management.md) |
+| Projects | [Projects](../guide/projects.md) |
+| Teams | [Teams](../guide/teams.md) |

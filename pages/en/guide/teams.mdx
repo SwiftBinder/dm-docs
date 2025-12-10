@@ -1,0 +1,423 @@
+# Teams
+
+Complete guide to team management — creating teams, managing members, and project assignments.
+
+---
+
+## Overview
+
+Teams are groups of users who work together. Instead of managing project access person by person, you can assign entire teams to projects.
+
+{/* SCREENSHOT: teams-page.png
+     Capture the Teams page showing:
+     - List of teams
+     - Team names and descriptions
+     - Member counts
+     - Create Team button (if visible)
+*/}
+
+---
+
+## Understanding Teams
+
+### Benefits of Teams
+
+| Without Teams | With Teams |
+|---------------|------------|
+| Add 10 people to a project individually | Add 1 team to a project |
+| New hire? Add to each project | New hire? Add to team, gets all project access |
+| Someone leaves? Remove from each project | Someone leaves? Remove from team |
+
+### Team Structure
+
+```
+Team
+├── Name & Description
+├── Team Lead
+├── Members
+│   ├── Member 1 (role)
+│   ├── Member 2 (role)
+│   └── ...
+└── Project Assignments
+    ├── Project A (permission level)
+    ├── Project B (permission level)
+    └── ...
+```
+
+---
+
+## Viewing Teams
+
+### Teams List
+
+Click **Team** in the sidebar to see all teams.
+
+{/* SCREENSHOT: teams-list.png
+     Capture the Teams list showing:
+     - Multiple teams
+     - Team names
+     - Member counts
+     - Lead information if shown
+*/}
+
+### Team Information
+
+Each team shows:
+- **Name** — Team title
+- **Description** — What the team does
+- **Members** — Count of team members
+- **Lead** — Team leader (if applicable)
+
+---
+
+## Team Details
+
+### Opening Team Details
+
+Click on any team to view details.
+
+{/* SCREENSHOT: team-detail-page.png
+     Capture the Team detail page showing:
+     - Team name and description
+     - Team lead info
+     - Member list
+     - Projects assigned to
+     - Action buttons
+*/}
+
+### Detail Page Sections
+
+| Section | Contents |
+|---------|----------|
+| **Overview** | Name, description, lead |
+| **Members** | List of team members with roles |
+| **Projects** | Projects this team is assigned to |
+| **Settings** | Team configuration |
+
+---
+
+## Team Roles
+
+### Member Roles Within Teams
+
+| Role | Permissions |
+|------|-------------|
+| **Viewer** | See team info, limited participation |
+| **Member** | Full team participation |
+| **Lead** | Manage team members, settings |
+
+### Team Lead Responsibilities
+
+The team lead can:
+- Add and remove members
+- Change member roles
+- Edit team settings
+- Assign team to projects
+
+---
+
+## Creating Teams
+
+### Who Can Create
+
+Any authenticated user can create teams (they become the lead).
+
+### Creation Process
+
+1. Go to **Team**
+2. Click **Create Team**
+
+{/* SCREENSHOT: create-team-dialog.png
+     Capture the Create Team dialog showing:
+     - Name field
+     - Description field
+     - Create button
+*/}
+
+3. Enter team details:
+
+| Field | Description | Required |
+|-------|-------------|----------|
+| **Name** | Team title | Yes |
+| **Description** | What the team does | Recommended |
+
+4. Click **Create**
+
+You automatically become the team lead.
+
+### Naming Best Practices
+
+| Good Names | Why |
+|------------|-----|
+| "Marketing Team" | Clear function |
+| "Engineering - Backend" | Department + specialty |
+| "Client ABC Project Team" | Specific assignment |
+| "2024 Audit Committee" | Time-bound group |
+
+---
+
+## Managing Team Members
+
+### Adding Members
+
+1. Open the team
+2. Go to **Members** section
+3. Click **Add Member**
+
+{/* SCREENSHOT: add-team-member.png
+     Capture the Add Member dialog showing:
+     - User search/select field
+     - Role selection
+     - Add button
+*/}
+
+4. Search for the user
+5. Select their role
+6. Click **Add**
+
+### Removing Members
+
+1. Find the member in the list
+2. Click **Remove** (or X icon)
+3. Confirm removal
+
+### Changing Member Roles
+
+1. Find the member
+2. Click on their current role
+3. Select new role
+
+### Transferring Leadership
+
+To make someone else the lead:
+1. Change their role to **Lead**
+2. (Optional) Change your role to Member
+
+---
+
+## Assigning Teams to Projects
+
+### How It Works
+
+When a team is assigned to a project:
+- All team members get project access
+- Access level depends on permission setting
+- Changes to team membership automatically affect project access
+
+### Assigning from Project
+
+1. Open the project
+2. Go to **Teams** section
+3. Click **Assign Team**
+4. Select team and permission level
+
+### Viewing Team's Projects
+
+On the team detail page, see which projects the team is assigned to.
+
+{/* SCREENSHOT: team-projects-list.png
+     Capture the team's project list showing:
+     - Projects the team is assigned to
+     - Permission levels for each
+*/}
+
+### Permission Levels
+
+| Level | What It Means |
+|-------|---------------|
+| **View** | Read-only access to project documents |
+| **Edit** | Can create and modify documents |
+| **Manage** | Full project management |
+
+---
+
+## Team Settings
+
+### Editing Team Information
+
+1. Open the team
+2. Click **Edit** or **Settings**
+3. Modify:
+   - Name
+   - Description
+4. Save changes
+
+### Team Visibility
+
+Teams are visible to:
+- Team members
+- Project managers (for projects the team is in)
+- Administrators
+
+---
+
+## Deleting Teams
+
+### When to Delete
+
+- Team is no longer needed
+- Organizational restructure
+- Duplicate team created
+
+### Before Deleting
+
+Consider:
+- Remove from projects first
+- Ensure members have individual access if needed
+- Archive vs delete
+
+### Deletion Process
+
+1. Open the team
+2. Click **Delete**
+3. Confirm
+
+{/* SCREENSHOT: delete-team-confirm.png
+     Capture the delete confirmation showing:
+     - Warning message
+     - Impact explanation
+     - Confirm/Cancel buttons
+*/}
+
+### What Happens
+
+- Team is removed
+- Members lose project access via this team
+- Individual project memberships remain unaffected
+
+---
+
+## Team Best Practices
+
+### Organization
+
+- **Align with org structure** — Mirror your department/function teams
+- **Purpose-based teams** — Create teams for specific initiatives
+- **Reasonable size** — Not too large, not too small
+
+### Naming Conventions
+
+Consistent naming helps everyone:
+```
+{Department} - {Function/Specialty}
+
+Examples:
+Marketing - Content
+Engineering - Frontend
+Sales - West Region
+```
+
+### Membership Management
+
+- **Regular audits** — Review membership quarterly
+- **Onboarding** — Add new hires to appropriate teams
+- **Offboarding** — Remove departing employees promptly
+
+### Project Assignment
+
+- **Appropriate access** — Only assign to projects where needed
+- **Correct permissions** — Match permission level to need
+- **Review regularly** — Update as project needs change
+
+---
+
+## Common Workflows
+
+### New Employee Onboarding
+
+```
+1. Admin creates user account
+       ↓
+2. Employee added to department team
+       ↓
+3. Employee automatically gets access to:
+   - Department projects
+   - Relevant documents
+       ↓
+4. Additional teams added as needed
+```
+
+### Team Reorganization
+
+```
+1. Create new team structure
+       ↓
+2. Add members to new teams
+       ↓
+3. Update project assignments
+       ↓
+4. Remove old team assignments
+       ↓
+5. Delete obsolete teams
+```
+
+### Project Kickoff
+
+```
+1. Create project
+       ↓
+2. Identify needed teams
+       ↓
+3. Assign teams with appropriate permissions
+       ↓
+4. Add individual members if needed
+       ↓
+5. Begin work
+```
+
+---
+
+## Permissions Summary
+
+| Action | Viewer | Member | Lead | Admin |
+|--------|--------|--------|------|-------|
+| View team | ✓ | ✓ | ✓ | ✓ |
+| View members | ✓ | ✓ | ✓ | ✓ |
+| Access team projects | Via assignment | Via assignment | Via assignment | ✓ |
+| Add members | | | ✓ | ✓ |
+| Remove members | | | ✓ | ✓ |
+| Edit team settings | | | ✓ | ✓ |
+| Delete team | | | ✓ | ✓ |
+| Assign to projects | | | ✓ | ✓ |
+
+---
+
+## Troubleshooting
+
+### Can't Find a Team
+
+**Check:**
+- You have access to view the team
+- Search/filter isn't excluding it
+- Team hasn't been deleted
+
+### Can't Add Team to Project
+
+**Possible causes:**
+- You need Project Admin or Owner role
+- Team doesn't exist
+- Already assigned
+
+### Members Not Getting Project Access
+
+**Check:**
+- Team is assigned to the project
+- Permission level is correct
+- User is active in the team
+
+### Removed from Team but Still Have Access
+
+**Possible causes:**
+- You have individual project membership
+- You're in another team with access
+- Changes take a moment to sync
+
+---
+
+## Related Guides
+
+| Topic | Guide |
+|-------|-------|
+| Project management | [Projects](projects.md) |
+| User management | [User Management](../admin/user-management.md) |
+| Roles & permissions | [Roles & Permissions](../reference/roles-permissions.md) |
