@@ -2,7 +2,13 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-    logo: <span style={{ fontWeight: 700, fontSize: '1.2rem' }}>📄 Document Manager</span>,
+    logo: (
+        <>
+            <img src="/dm-docs/logo.png" alt="Logo" style={{ height: '32px', marginRight: '8px' }} />
+            <span style={{ fontWeight: 700, fontSize: '1.2rem' }}>SwiftBinder</span>
+        </>
+    ),
+    // <span style={{ fontWeight: 700, fontSize: '1.2rem' }}></span>,
     project: {
         link: 'https://github.com/yourusername/document-manager',
     },
