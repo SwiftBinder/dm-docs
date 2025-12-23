@@ -121,6 +121,87 @@ This becomes your default when visiting the Documents page.
 
 ---
 
+## Templates & Stages
+
+The Settings page includes management for project templates and workflow stages.
+
+### Templates Tab
+
+Access project template management from the Settings page:
+
+{/* SCREENSHOT: settings-templates-tab.png
+     Capture the Templates tab showing:
+     - System Templates section
+     - My Templates section
+     - Template cards with name and category
+     - Create, Edit, Delete actions
+*/}
+
+#### System Templates
+
+Pre-configured templates provided by your organization:
+- **View** — See template details and stages
+- **Duplicate** — Create your own version to customize
+
+#### My Templates
+
+Templates you've created:
+- **Create** — Build new templates from scratch
+- **Edit** — Modify existing templates
+- **Delete** — Remove templates you no longer need
+
+#### Creating a Template
+
+1. Click **Create Template** (or Duplicate a system template)
+2. Fill in template details:
+
+| Field | Description |
+|-------|-------------|
+| **Name** | Template title |
+| **Description** | What the template is for |
+| **Category** | Grouping (e.g., Documentation, Approval) |
+| **Stages** | Workflow stages documents will go through |
+
+3. Configure stages (see Stages Tab below)
+4. Save
+
+### Stages Tab
+
+Configure workflow stages for project templates:
+
+{/* SCREENSHOT: settings-stages-tab.png
+     Capture the Stages tab showing:
+     - Stage template list
+     - Stage names with colors
+     - Order/sequence
+     - Edit and delete actions
+*/}
+
+#### Stage Configuration
+
+Each stage has:
+
+| Property | Description |
+|----------|-------------|
+| **Name** | Stage title (e.g., "Draft", "Review", "Published") |
+| **Color** | Visual indicator in Kanban and badges |
+| **Order** | Sequence in the workflow |
+| **Is Initial** | First stage for new documents |
+| **Is Final** | End stage (no further transitions) |
+| **Allowed Transitions** | Which stages can follow this one |
+
+#### Creating Stages
+
+1. Go to Settings → Stages
+2. Click **Create Stage Template**
+3. Add stages in order
+4. Define allowed transitions between stages
+5. Save
+
+> **Tip:** Start simple with 3-4 stages (Draft → Review → Published) and add complexity only when needed.
+
+---
+
 ## Notification Settings
 
 Control how Document Manager notifies you of activity.

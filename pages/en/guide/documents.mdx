@@ -22,21 +22,41 @@ Click **Documents** in the sidebar to see all documents you have access to.
 
 ### View Modes
 
-Toggle between two display modes:
+Toggle between three display modes using the icons in the toolbar:
 
 | Mode | Best For |
 |------|----------|
-| **Table View** | Scanning many documents quickly |
-| **Grid View** | Visual browsing, seeing more details per item |
+| **Table View** | Scanning many documents quickly, seeing key info at a glance |
+| **Grid View** | Visual browsing with card layout, seeing more details per item |
+| **Tree View** | Hierarchical folder browsing, understanding document organization |
 
 {/* SCREENSHOT: view-mode-toggle.png
      Capture the view mode toggle showing:
-     - Table view icon
-     - Grid view icon
+     - Table view icon (list icon)
+     - Grid view icon (grid icon)
+     - Tree view icon (folder tree icon)
      - Current selection highlighted
 */}
 
-Click the icons in the toolbar to switch views.
+Click the icons in the toolbar to switch views. Your preference is saved and remembered for your next visit.
+
+### Tree View
+
+The Tree View shows documents organized in a folder hierarchy:
+
+{/* SCREENSHOT: tree-view.png
+     Capture the tree view showing:
+     - Expandable/collapsible folders
+     - Documents nested under folders
+     - Folder icons and document icons
+     - Expand/collapse arrows
+*/}
+
+- **Expand folders** — Click the arrow or folder name to see contents
+- **Navigate** — Click a document to open its detail page
+- **Drag and drop** — Move documents between folders (if you have permission)
+
+> **Tip:** Tree View is especially useful when you have documents organized in a folder structure by project, year, or department.
 
 ### Table View Columns
 
@@ -158,6 +178,48 @@ File size limits are set by your administrator. If you encounter a size error:
 
 ---
 
+## Document Preview
+
+Before opening a document's full detail page, you can quickly preview its content using the preview sheet.
+
+### Opening Preview
+
+- **From Table View** — Click the preview icon (eye) in the Actions column
+- **From Grid View** — Click the preview button on the card
+- **From Detail Page** — Click "View Content" in the header
+
+{/* SCREENSHOT: document-preview-sheet.png
+     Capture the preview sheet showing:
+     - Full-width preview panel
+     - Document content displayed
+     - Version selector dropdown
+     - Close button
+*/}
+
+### Supported File Types
+
+| File Type | Preview Features |
+|-----------|-----------------|
+| **PDF** | Full document viewer with page navigation |
+| **Images** | Display with zoom and pan |
+| **Markdown** | Rendered formatting with syntax highlighting |
+| **Code files** | Syntax-highlighted code viewer |
+| **Text files** | Plain text display |
+| **Office docs** | Document preview (Word, Excel, PowerPoint) |
+
+### Version Preview
+
+Use the version dropdown in the preview to view any previous version:
+
+1. Open the preview sheet
+2. Click the version dropdown (shows current version)
+3. Select a different version
+4. Preview updates to show that version
+
+> **Tip:** This is useful for comparing versions visually without downloading them.
+
+---
+
 ## Document Detail Page
 
 Click any document name to open its detail page.
@@ -166,8 +228,8 @@ Click any document name to open its detail page.
      Capture the document detail page showing:
      - Document name at top
      - Status badge
-     - Action buttons (Download, Edit, Delete)
-     - Tabs: Overview, Versions, Comments
+     - Action buttons (View Content, Edit toggle)
+     - Tabs: Overview, Workflow (if applicable), Versions, Comments
      - Document information area
      - Browser window: 1400x800
 */}
@@ -176,18 +238,35 @@ Click any document name to open its detail page.
 
 | Section | Contains |
 |---------|----------|
-| **Header** | Name, status, actions |
-| **Tabs** | Overview, Versions, Comments |
+| **Header** | Name, status, view content button, edit toggle |
+| **Tabs** | Overview, Workflow*, Versions, Comments |
 | **Content Area** | Tab-specific content |
-| **Sidebar** | Metadata and quick info |
+
+*The Workflow tab only appears if the document belongs to a project with stage templates configured.
 
 ### Action Buttons
 
 | Button | Action |
 |--------|--------|
-| **Download** | Get the current file |
-| **Edit** | Modify document metadata |
-| **Delete** | Remove the document |
+| **View Content** | Open the preview sheet |
+| **Edit/Save** | Toggle edit mode for metadata |
+| **Star** | Add to your starred documents |
+| **More Options** | Download, delete, and other actions |
+
+### Workflow Tab
+
+If your document is part of a project with workflow stages, you'll see a Workflow tab showing:
+
+{/* SCREENSHOT: document-workflow-tab.png
+     Capture the workflow tab showing:
+     - Current stage indicator
+     - Stage history timeline
+     - Stage transition dates
+*/}
+
+- **Current Stage** — Where the document is now (Draft, Review, Published, etc.)
+- **Stage History** — Timeline of all stage transitions
+- **Stage Actions** — Move to next stage (if you have permission)
 
 ---
 

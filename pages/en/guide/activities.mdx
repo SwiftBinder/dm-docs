@@ -122,37 +122,73 @@ Each activity shows:
 
 ## Filtering Activities
 
-### Filter Options
+### Tab-Based Filtering
 
-{/* SCREENSHOT: activity-filters.png
-     Capture the filter area showing:
-     - Resource type filter
-     - Date range (if available)
-     - User filter (if available)
+The Activities page uses tabs to filter by resource type:
+
+{/* SCREENSHOT: activity-tabs.png
+     Capture the tab bar showing:
+     - All Activities tab
+     - Documents tab
+     - Projects tab
+     - Versions tab
+     - Comments tab
+     - Currently selected tab highlighted
 */}
 
-| Filter | Shows |
-|--------|-------|
-| **All** | Everything |
-| **Documents** | Document-related events |
-| **Projects** | Project changes |
-| **Comments** | Comment activity |
-| **Users** | User actions |
-| **Versions** | Version uploads, rollbacks |
+| Tab | Shows |
+|-----|-------|
+| **All Activities** | Every event in the system |
+| **Documents** | Document created, updated, deleted, downloaded |
+| **Projects** | Project changes and member updates |
+| **Versions** | Version uploads and rollbacks |
+| **Comments** | Comment additions, edits, resolutions |
 
-### Using Filters
+### Using Tabs
 
-1. Find the filter dropdown or buttons
-2. Select the resource type
-3. Activity list updates
+1. Click on a tab to filter
+2. Activity list updates immediately
+3. Click "All Activities" to see everything again
 
-### Combining Filters
+### Activity Cards
 
-If multiple filters are available:
-- Select date range
-- Choose resource type
-- Pick specific user
-- Results combine all criteria
+Each activity displays as a card with visual elements:
+
+{/* SCREENSHOT: activity-cards.png
+     Capture showing:
+     - Activity card with icon
+     - Action badge (created, updated, deleted)
+     - Resource name
+     - Relative timestamp
+     - Additional context
+*/}
+
+| Element | Description |
+|---------|-------------|
+| **Icon** | Visual indicator by resource type (document, project, etc.) |
+| **Action Badge** | Color-coded badge (created=green, updated=blue, deleted=red) |
+| **Resource Name** | Name of the affected item |
+| **Timestamp** | Relative time (e.g., "2 hours ago") |
+| **Context** | Additional details like version number |
+
+### Scrollable Activity List
+
+Activities are displayed in a scrollable container:
+- Most recent activities appear at the top
+- Scroll down to see older events
+- List automatically refreshes with new activity
+
+### Empty States
+
+When no activities match your filter:
+- A helpful message explains there's no activity
+- Try a different tab or check back later
+
+{/* SCREENSHOT: activity-empty-state.png
+     Capture showing:
+     - Empty state message
+     - Suggestion to try different filter
+*/}
 
 ---
 

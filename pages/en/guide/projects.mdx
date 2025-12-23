@@ -159,9 +159,9 @@ If you have permission:
      Capture the Create Project dialog showing:
      - Name field
      - Description field
-     - Status dropdown
-     - Start Date field
-     - End Date field
+     - Version format dropdown
+     - Project template dropdown
+     - Naming template section
      - Create button
 */}
 
@@ -171,9 +171,59 @@ If you have permission:
 |-------|-------------|----------|
 | **Name** | Clear project title | Yes |
 | **Description** | What the project is about | Recommended |
-| **Status** | Initial status (usually Active) | Yes |
-| **Start Date** | When work begins | Optional |
-| **End Date** | Target completion | Optional |
+| **Version Format** | How versions are numbered | Yes |
+| **Project Template** | Pre-configured stages and settings | Optional |
+| **Naming Template** | Automatic document naming pattern | Optional |
+
+4. Click **Create**
+
+### Version Formats
+
+Choose how document versions are numbered in this project:
+
+| Format | Example | Best For |
+|--------|---------|----------|
+| **Semantic** | 1.2.3 (major.minor.patch) | Technical documents, software |
+| **Two-Part** | 1.2 (major.minor) | General documents |
+| **Integer** | 1, 2, 3... | Simple sequential versioning |
+
+### Project Templates
+
+Templates provide pre-configured settings for common project types:
+
+{/* SCREENSHOT: project-template-select.png
+     Capture the template selection showing:
+     - Template dropdown
+     - Template description
+     - Stage workflow preview
+*/}
+
+Available templates typically include:
+- **Standard Documentation** — Basic draft → review → published workflow
+- **Technical Approval** — Multi-stage technical review process
+- **Quick Publication** — Minimal stages for fast turnaround
+
+> **Tip:** Your organization may have custom templates. Ask your administrator about available options.
+
+### Naming Templates
+
+Configure automatic document naming with variables:
+
+{/* SCREENSHOT: naming-template-config.png
+     Capture naming template showing:
+     - Variable list (Project, Date, Counter, etc.)
+     - Separator selection
+     - Live preview of generated filename
+*/}
+
+Variables you can use:
+- `{project}` — Project name or code
+- `{date}` — Current date
+- `{customer}` — Customer name
+- `{counter}` — Auto-incrementing number
+- Custom variables defined by your admin
+
+Example: `{project}-{date}-{counter}` → `PROJ-2024-001`
 
 4. Click **Create**
 
@@ -274,7 +324,36 @@ Instead of adding members one by one:
 
 ### Viewing Project Documents
 
-On the project detail page, the Documents section shows all documents in this project.
+On the project detail page, you'll find multiple ways to view and manage documents.
+
+### Kanban Board View
+
+Projects with stage templates show a Kanban board for visual document management:
+
+{/* SCREENSHOT: project-kanban-board.png
+     Capture the Kanban board showing:
+     - Columns for each stage (Draft, Review, Published, etc.)
+     - Document cards in each column
+     - Drag handles on cards
+     - Document counts per column
+*/}
+
+**Using the Kanban Board:**
+- **View stages** — Each column represents a workflow stage
+- **Drag documents** — Move cards between columns to change stage
+- **Quick access** — Click any card to open the document
+- **Progress overview** — See at a glance where documents are in the workflow
+
+### Document List
+
+Below the Kanban (or as the main view for projects without stages):
+
+{/* SCREENSHOT: project-documents-list.png
+     Capture showing:
+     - Document list within project
+     - Status, name, modified date
+     - Quick actions
+*/}
 
 ### Filtering by Project
 
